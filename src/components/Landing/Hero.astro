@@ -1,0 +1,33 @@
+---
+import BluePyramid from "./Shapes/BluePyramid.astro";
+import GreenOblong from "./Shapes/GreenOblong.astro";
+import RedBall from "./Shapes/RedBall.astro";
+import YellowBall from "./Shapes/YellowBall.astro";
+---
+
+<section
+	class="flex items-center justify-center bg-[url(background.svg)] bg-cover bg-center bg-no-repeat bg-fixed h-screen relative overflow-hidden"
+>
+	<GreenOblong
+		class="absolute top-0 left-[-10%] w-3/12 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+	/>
+	<RedBall
+		class="absolute top-8 right-8 w-2/12 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+	/>
+	<YellowBall
+		class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+	/>
+	<BluePyramid
+		class="absolute bottom-[15%] right-[20%] w-1/12 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+	/>
+	<div class="max-w-4xl mx-auto">
+		<h1
+			class="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none text-center text-white"
+		>
+			Building a brighter tomorrow through <span
+				class="bg-gradient-to-r from-purple-300 to-pink-300 text-transparent bg-clip-text"
+				>community-driven</span
+			> innovation.
+		</h1>
+	</div>
+</section>

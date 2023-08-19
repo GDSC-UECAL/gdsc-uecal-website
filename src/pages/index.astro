@@ -1,0 +1,23 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Landing/Hero.astro";
+import About from "../components/Landing/About.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={"Home"} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="text-gray-700">
+		<Header />
+		<main>
+			<Hero />
+			<About />
+			<Footer />
+		</main>
+	</body>
+</html>

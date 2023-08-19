@@ -1,0 +1,43 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import Logo from "./Logo.astro";
+---
+
+<header class="fixed w-full top-0 left-0 z-50" id="navbar">
+	<div
+		class="flex justify-between items-center h-16 px-20 lg:px-14 max-w-7xl mx-auto"
+	>
+		<a href="#">
+			<Logo class="w-14 h-auto" />
+		</a>
+		<nav class="">
+			<ul class="flex items-center gap-16">
+				<HeaderLink href="/">Home</HeaderLink>
+				<HeaderLink href="/about">About</HeaderLink>
+				<HeaderLink href="/events">Events</HeaderLink>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<script>
+	window.addEventListener("scroll", function () {
+		const navbar = document.getElementById("navbar");
+
+		if (navbar) {
+			if (window.scrollY > 0) {
+				navbar.classList.add("bg-purple-950");
+				navbar.classList.add("backdrop-filter");
+				navbar.classList.add("backdrop-blur-lg");
+				navbar.classList.add("bg-opacity-30");
+				navbar.classList.add("shadow-md");
+			} else {
+				navbar.classList.remove("bg-purple-950");
+				navbar.classList.remove("backdrop-filter");
+				navbar.classList.remove("backdrop-blur-lg");
+				navbar.classList.remove("bg-opacity-30");
+				navbar.classList.remove("shadow-md");
+			}
+		}
+	});
+</script>
