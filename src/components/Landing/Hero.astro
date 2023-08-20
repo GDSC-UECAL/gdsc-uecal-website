@@ -9,25 +9,64 @@ import YellowBall from "./Shapes/YellowBall.astro";
 	class="flex items-center justify-center bg-[url(background.svg)] bg-cover bg-center bg-no-repeat bg-fixed h-screen relative overflow-hidden"
 >
 	<GreenOblong
-		class="absolute top-0 left-[-10%] w-3/12 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+		class="absolute top-0 left-[-10%] w-3/12 h-auto animate-[floating_4s_ease-in-out_infinite] delay-100"
 	/>
 	<RedBall
-		class="absolute top-8 right-8 w-2/12 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+		class="absolute top-8 right-8 w-2/12 h-auto animate-[floating_5s_ease-in-out_infinite] delay-200"
 	/>
 	<YellowBall
-		class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+		class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto animate-[floating_3s_ease-in-out_infinite]"
 	/>
 	<BluePyramid
-		class="absolute bottom-[15%] right-[20%] w-1/12 h-auto animate-[bounce_5s_ease-in-out_infinite]"
+		class="absolute bottom-[10%] right-[20%] w-2/12 h-auto animate-[floating_6s_ease-in-out_infinite] delay-300"
 	/>
-	<div class="max-w-4xl mx-auto">
+	<div
+		class="max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-5 py-20 px-20 rounded-3xl shadow-md"
+	>
 		<h1
-			class="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none text-center text-white"
+			class="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none text-center md:text-start text-white"
 		>
-			Building a brighter tomorrow through <span
-				class="bg-gradient-to-r from-purple-300 to-pink-300 text-transparent bg-clip-text"
-				>community-driven</span
-			> innovation.
+			Together, we discover
+			<br class="xl:hidden" />
+			<span id="typewriter" class="text-gradient-purple inline-block"></span>
 		</h1>
 	</div>
 </section>
+
+<script>
+	const words: string[] = ["future.", "dreams.", "careers.", "solutions."];
+	let i: number = 0;
+	let j: number = 0;
+	let currentWord: string = "";
+	let isDeleting: boolean = false;
+
+	function type() {
+		currentWord = words[i];
+		if (isDeleting) {
+			const typewriterElement = document.getElementById("typewriter");
+			if (typewriterElement) {
+				typewriterElement.textContent = currentWord.substring(0, j - 1);
+			}
+			j--;
+			if (j === 0) {
+				isDeleting = false;
+				i++;
+				if (i === words.length) {
+					i = 0;
+				}
+			}
+		} else {
+			const typewriterElement = document.getElementById("typewriter");
+			if (typewriterElement) {
+				typewriterElement.textContent = currentWord.substring(0, j + 1);
+			}
+			j++;
+			if (j === currentWord.length) {
+				isDeleting = true;
+			}
+		}
+		setTimeout(type, 120);
+	}
+
+	type();
+</script>
