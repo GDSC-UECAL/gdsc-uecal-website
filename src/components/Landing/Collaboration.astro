@@ -1,64 +1,59 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../assets/gdsclogo.svg";
+import manVR from "../../assets/man-vr.svg";
+import topRightCylinder from "../../assets/top-right-cylinder.svg";
+import bottomRightCylinder from "../../assets/bottom-right-cylinder.svg";
+import bottomLeftCircle from "../../assets/bottom-left-circle.svg";
+import TextInput from "../TextInput.astro";
+import TextArea from "../TextArea.astro";
+import { Fragment } from "astro/dist/runtime/server";
+import Button from "../Button.astro";
+---
+
 <section class="py-40">
 	<div
-		class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-800 dark:text-gray-100"
+		class="max-w-7xl mx-auto px-14 sm:px-32 lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center gap-40"
 	>
-		<div class="flex flex-col justify-between">
-			<div class="space-y-2">
-				<h2 class="text-4xl font-bold leading-tight">
-					Want to collaborate with us?
-				</h2>
-				<h2 class="text-3xl font-bold leading-tight">Let's work together!</h2>
-			</div>
-		</div>
-		<form novalidate="" class="space-y-6 ng-untouched ng-pristine ng-valid">
-			<div>
-				<label for="email" class="text-sm">Email</label>
-				<input
-					id="email"
-					type="email"
-					placeholder="warrior@gmail.com"
-					class="w-full p-3 rounded dark:bg-gray-800 border-2"
-				/>
-			</div>
-			<div>
-				<label for="name" class="text-sm">Subject</label>
-				<input
-					id="name"
-					type="text"
-					placeholder="Juan Dela Cruz"
-					class="w-full p-3 rounded dark:bg-gray-800 border-2"
-				/>
-			</div>
-
-			<div>
-				<label for="message" class="text-sm">Message</label>
-				<textarea
-					id="message"
-					rows="3"
-					placeholder="Write us something!"
-					class="w-full p-3 rounded dark:bg-gray-800 border-2"
-					spellcheck="false"></textarea>
-			</div>
-			<a
-				href="#_"
-				class="place-content-center relative items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium rounded-lg shadow-2xl group active:font-thin"
+		<div>
+			<h2
+				class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6"
 			>
-				<span
-					class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-primary-purple-500 blur ease"
-				>
-				</span>
-				<span
-					class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease"
-				>
-					<span
-						class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-fuchsia-700 rounded-full blur"
-					></span>
-					<span
-						class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-fuchsia-800 rounded-full blur"
-					></span>
-				</span>
-				<span class="relative text-white">Submit</span>
-			</a>
-		</form>
+				Empower Together, Spark Change! Let's Join Forces to Elevate
+				Communities!
+			</h2>
+			<form action="" class="mt-6 flex flex-col space-y-4" id="contact-form">
+				<TextInput label="Email" type="email" name="email" required />
+				<TextInput label="Subject" type="text" name="subject" required />
+				<TextArea label="Message" rows="5" required name="message" />
+				<Button asLink={false} type="submit">Submit</Button>
+			</form>
+		</div>
+
+		<div class="relative hidden lg:block">
+			<Image
+				src={manVR}
+				alt="Man with VR headset"
+				class="w-100 h-auto animate-[floating_2s_ease-in-out_infinite]"
+			/>
+
+			<Image
+				src={topRightCylinder}
+				alt="Man with VR headset"
+				class="absolute top-0 right-0 w-[25%] h-auto animate-[floating_3s_ease-in-out_infinite] delay-100"
+			/>
+
+			<Image
+				src={bottomRightCylinder}
+				alt="Man with VR headset"
+				class="absolute bottom-0 right-[10%] w-[30%] h-auto animate-[floating_4s_ease-in-out_infinite] delay-150"
+			/>
+
+			<Image
+				src={bottomLeftCircle}
+				alt="Man with VR headset"
+				class="absolute bottom-0 left-0 w-[30%] h-auto animate-[floating_5s_ease-in-out_infinite] delay-75"
+			/>
+		</div>
 	</div>
 </section>
