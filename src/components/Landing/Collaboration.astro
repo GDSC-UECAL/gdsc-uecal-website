@@ -23,9 +23,27 @@ import Button from "../Button.astro";
 				Communities!
 			</h2>
 			<form action="" class="mt-6 flex flex-col space-y-4" id="contact-form">
-				<TextInput label="Email" type="email" name="email" required />
-				<TextInput label="Subject" type="text" name="subject" required />
-				<TextArea label="Message" rows="5" required name="message" />
+				<TextInput
+					label="Email"
+					type="email"
+					name="email"
+					placeholder="Email"
+					required
+				/>
+				<TextInput
+					label="Subject"
+					type="text"
+					name="subject"
+					placeholder="Subject"
+					required
+				/>
+				<TextArea
+					label="Message"
+					rows="5"
+					name="message"
+					placeholder="Message"
+					required
+				/>
 				<Button asLink={false} type="submit">Submit</Button>
 			</form>
 		</div>
@@ -40,7 +58,7 @@ import Button from "../Button.astro";
 			<Image
 				src={topRightCylinder}
 				alt="Man with VR headset"
-				class="absolute top-0 right-0 w-[25%] h-auto animate-[floating_3s_ease-in-out_infinite] delay-100"
+				class="absolute top-0 right-0 w-[20%] h-auto animate-[floating_3s_ease-in-out_infinite] delay-100"
 			/>
 
 			<Image

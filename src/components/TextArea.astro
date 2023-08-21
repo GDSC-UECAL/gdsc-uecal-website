@@ -7,29 +7,9 @@ const { label, placeholder, ...props } = Astro.props as Props;
 ---
 
 <div class="flex flex-col relative group">
+	<label for={props.name} class="block mb-2">{label}</label>
 	<textarea
 		{...props}
-		class="border border-gray-400 rounded-md px-4 py-3 input"
-		placeholder="a"></textarea>
-	<label
-		for={props.name}
-		class="font-[400] absolute top-6 -translate-y-1/2 left-4 text-gray-400 group-focus-within:top-0 transition-all px-1 -mx-1 group-focus-within:text-sm label pointer-events-none"
-		>{label}
-	</label>
+		class="shadow appearance-none border rounded w-full p-3 leading-tight focus:outline-none focus:shadow-outline"
+		placeholder="Message"></textarea>
 </div>
-
-<style>
-	.input::placeholder {
-		color: transparent;
-	}
-	.input:focus + .label,
-	.input:not(:placeholder-shown) + .label {
-		font-size: 0.75rem;
-		background-color: white;
-		@apply text-gray-500;
-	}
-
-	.input:not(:placeholder-shown) + .label {
-		top: 0;
-	}
-</style>
