@@ -14,7 +14,7 @@ const El = props.asLink ? "a" : "button";
 	<El
 		{...props as any}
 		class:list={[
-			"bg-purple-900 px-6 py-2 text-white text-base font-medium rounded shadow-sm hover:bg-purple-950",
+			"bg-purple-900 px-4 py-2 text-white text-base font-medium rounded shadow-sm hover:bg-purple-950 transition-all",
 		]}
 	>
 		<slot />

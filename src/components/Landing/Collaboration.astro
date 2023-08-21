@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "../../assets/gdsclogo.svg";
 import manVR from "../../assets/man-vr.svg";
 import topRightCylinder from "../../assets/top-right-cylinder.svg";
 import bottomRightCylinder from "../../assets/bottom-right-cylinder.svg";
@@ -15,7 +14,7 @@ import Button from "../Button.astro";
 	<div
 		class="max-w-7xl mx-auto px-14 sm:px-32 lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center gap-40"
 	>
-		<div>
+		<div class="order-2 lg:order-none">
 			<h2
 				class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6"
 			>
@@ -47,7 +46,7 @@ import Button from "../Button.astro";
 			</form>
 		</div>
 
-		<div class="relative hidden lg:block">
+		<div class="relative order-1 lg:order-none">
 			<Image
 				src={manVR}
 				alt="Man with VR headset"
@@ -69,7 +68,7 @@ import Button from "../Button.astro";
 			<Image
 				src={bottomLeftCircle}
 				alt="Man with VR headset"
-				class="absolute bottom-0 left-0 w-[30%] h-auto animate-[floating_5s_ease-in-out_infinite] delay-75"
+				class="absolute bottom-[10%] left-0 w-[30%] h-auto animate-[floating_5s_ease-in-out_infinite] delay-75"
 			/>
 		</div>
 	</div>

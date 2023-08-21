@@ -2,9 +2,10 @@
 import HeaderLink from "./HeaderLink.astro";
 import { Image } from "astro:assets";
 import Logo from "../assets/gdsclogo.svg";
+import Button from "./Button.astro";
 ---
 
-<header class="fixed w-full top-0 left-0 z-50" id="navbar">
+<header class="fixed w-full top-0 left-0 z-50 transition-all" id="navbar">
 	<div
 		class="flex justify-between items-center h-16 px-20 lg:px-14 max-w-7xl mx-auto"
 	>
@@ -16,6 +17,7 @@ import Logo from "../assets/gdsclogo.svg";
 				<HeaderLink href="/">Home</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
 				<HeaderLink href="/events">Events</HeaderLink>
+				<Button asLink={true} href="/about">Become a member</Button>
 			</ul>
 		</nav>
 	</div>
