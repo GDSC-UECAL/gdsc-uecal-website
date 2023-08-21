@@ -6,8 +6,6 @@
 
 Google Developer Student Clubs University of the East Caloocan is a community group for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome.
 
-<br />
-
 # 🤼 Contributors
 **Founder Contributors** of the project:
 | Name | Position | Role |
