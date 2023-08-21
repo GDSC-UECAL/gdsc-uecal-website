@@ -31,13 +31,13 @@ import YellowBall from "../../assets/yellow-ball.svg";
 		class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto animate-[floating_3s_ease-in-out_infinite]"
 	/>
 	<div
-		class="max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-5 py-20 px-20 rounded-3xl shadow-md"
+		class="max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-5 py-20 px-20 rounded-3xl shadow-md border-solid border-2 border-white border-opacity-5"
 	>
 		<h1
 			class="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none text-center md:text-start text-white"
 		>
 			Together, we discover
-			<br class="xl:hidden" />
+			<br />
 			<span id="typewriter" class="text-gradient-purple inline-block"></span>
 		</h1>
 	</div>
@@ -75,7 +75,7 @@ import YellowBall from "../../assets/yellow-ball.svg";
 				isDeleting = true;
 			}
 		}
-		setTimeout(type, 120);
+		setTimeout(type, 125);
 	}
 
 	type();
