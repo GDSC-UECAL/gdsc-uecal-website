@@ -1,5 +1,7 @@
 ---
-import Logo from "../Logo.astro";
+import { Image } from "astro:assets";
+import Logo from "../../assets/gdsclogo.svg";
+import gdscImg from "../../assets/emman.png";
 ---
 
 <section class="py-40 bg-gray-100">
@@ -7,7 +9,12 @@ import Logo from "../Logo.astro";
 		class="max-w-7xl mx-auto px-14 sm:px-32 lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center gap-24 lg:gap-x-20 gap-y-24"
 	>
 		<div>
-			<Logo class="w-32 lg:16 h-auto mx-auto lg:mx-0" />
+			<Image
+				src={Logo}
+				alt="GDSC Logo"
+				class="w-32 lg:16 h-auto mx-auto lg:mx-0"
+			/>
+
 			<h2
 				class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6"
 			>
@@ -27,7 +34,11 @@ import Logo from "../Logo.astro";
 		</div>
 
 		<div>
-			<img src="emman.png" alt="" class="w-100 h-auto rounded-md" />
+			<Image
+				src={gdscImg}
+				alt="GDSC member picture"
+				class="w-100 h-auto rounded-md"
+			/>
 		</div>
 	</div>
 </section>

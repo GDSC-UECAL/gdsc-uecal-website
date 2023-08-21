@@ -1,5 +1,6 @@
 ---
-import Logo from "./Logo.astro";
+import { Image } from "astro:assets";
+import Logo from "../assets/gdsclogo.svg";
 const today = new Date();
 ---
 
@@ -11,7 +12,7 @@ const today = new Date();
 			<div class="md:max-w-md lg:col-span-3">
 				<div class="grid">
 					<a href="/">
-						<Logo class="w-14 h-auto" />
+						<Image src={Logo} alt="GDSC Logo" class="w-14 h-auto" />
 					</a>
 					<span class="text-xl font-bold tracking-wide"
 						>Google Developer Student Clubs</span

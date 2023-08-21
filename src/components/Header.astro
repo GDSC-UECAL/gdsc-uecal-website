@@ -1,6 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import Logo from "./Logo.astro";
+import { Image } from "astro:assets";
+import Logo from "../assets/gdsclogo.svg";
 ---
 
 <header class="fixed w-full top-0 left-0 z-50" id="navbar">
@@ -8,7 +9,7 @@ import Logo from "./Logo.astro";
 		class="flex justify-between items-center h-16 px-20 lg:px-14 max-w-7xl mx-auto"
 	>
 		<a href="#">
-			<Logo class="w-14 h-auto" />
+			<Image src={Logo} alt="GDSC Logo" class="w-14 h-auto" />
 		</a>
 		<nav class="">
 			<ul class="flex items-center gap-16">
