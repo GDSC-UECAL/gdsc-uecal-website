@@ -1,17 +1,24 @@
 ---
+import { Image } from "astro:assets";
 import Button from "../Button.astro";
-
+import othergdsc from "../../assets/about/othergdsc.png";
 ---
 
-<section class="py-32 px-8 md:px-24">
+<section class="py-40 px-8 md:px-24">
 	<div class="flex flex-col justify-center items-center">
         <h1 class="text-3xl text-center md:text-5xl font-bold mb-16">Meet other GDSC Chapters!</h1>
-		<div class="flex flex-col md:flex-row gap-8">
-			<div class="max-w-[690px] md:min-w-[690px] h-[380px] bg-gray-300">
-				Image
-			</div>
+		<div
+    		class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8"
+		>    
+
+			<Image
+				src={othergdsc}
+				alt="Vision Picture"
+				class="w-auto lg:16 h-auto mx-auto lg:mx-0 rounded-xl"
+        	/>
+
 			<div class="flex flex-col">
-				<p class="text-lg md:text-2xl leading-relaxed mb-12">
+				<p class="text-lg md:text-2xl leading-relaxed mb-8">
 					GDSC-UECal is only one of 43 Google Developer Student Clubs (GDSCs) 
 					in the Philippines, all of which are university-based community groups 
 					that aim to bridge the gap between theory and practical application for 
