@@ -6,23 +6,30 @@ import Button from "./Button.astro";
 ---
 
 <header class="fixed w-full top-0 left-0 z-50 transition-all" id="navbar">
-	<div
-		class="flex justify-between items-center h-16 px-20 lg:px-14 max-w-7xl mx-auto"
+	<div 
+		class="flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
 	>
-		<a href="/">
+
+		<a href="/" class="flex-shrink-0">
 			<Image src={Logo} alt="GDSC Logo" class="w-14 h-auto" />
 		</a>
-		<nav class="">
-			<ul class="flex items-center gap-16">
+
+		<nav class="hidden md:block">
+			<ul class="flex items-center gap-8">
 				<HeaderLink href="/">Home</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
-				<HeaderLink href="/teams">Events</HeaderLink>
+				<HeaderLink href="/teams">Teams</HeaderLink>
+				<HeaderLink href="/projects">Projects</HeaderLink>
 				<HeaderLink href="/events">Events</HeaderLink>
 				<Button asLink={true} href="/about">Become a member</Button>
 			</ul>
 		</nav>
+		<div class="md:hidden">
+			<Button asLink={true} href="/about">Become a member</Button>
+		</div>
 	</div>
 </header>
+
 
 
 <script>
