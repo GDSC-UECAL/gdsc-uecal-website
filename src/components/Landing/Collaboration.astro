@@ -73,3 +73,30 @@ import Button from "../Button.astro";
 		</div>
 	</div>
 </section>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+	const public_key = import.meta.env.EMAILJS_PUBLIC_KEY;
+	(function() {
+		emailjs.init(public_key);
+	})();
+</script>
+<script type="text/javascript">
+	const contactForm = document.getElementById('contact-form')
+	const service_id = import.meta.env.EMAILJS_SERVICE_ID;
+	const template_id = import.meta.env.EMAILJS_TEMPLATE_ID;
+
+	window.onload = function() {
+		contactForm.addEventListener('submit', function(event) {
+			event.preventDefault();
+
+			emailjs.sendForm(service_id, template_id, this)
+				.then(function() {
+					contactForm.reset();
+					console.log('Email Sent Succesfully!');
+				}, function(error) {
+					console.log('Failed: ', error);
+				});
+		});
+	}
+</script>
