@@ -1,9 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import DataCamp from "../../assets/landing/datacamp.jpg";
-import Lawig from "../../assets/landing/lawig.jpg";
-import TSAngular from "../../assets/landing/tsangular.jpg";
-import Intronode from "../../assets/landing/intronode.jpg";
+import { getCollection } from "astro:content";
+import FormattedDate from "../FormattedDate.astro";
+
+const posts = (await getCollection("events")).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <!--
@@ -23,101 +25,32 @@ import Intronode from "../../assets/landing/intronode.jpg";
 <div class="bg-white">
     <div class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900">Previous Events</h2>
-  
+
       <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        
-        <div class="group relative drop-shadow-xl">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-violet-900 lg:aspect-none group-hover:opacity-50 lg:h-100">
-            
-            <Image
-		        src={DataCamp}
-		        alt="Blue Pyramid Figure"
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full"
-	        />
-          </div>
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-900">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Empowering the Data Driven Community
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-500">September 23, 2023</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="group relative drop-shadow-xl">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-100">
-              
-            <Image
-		        src={Lawig}
-		        alt="Blue Pyramid Figure"
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full"
-	        />
-
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-900">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    LAWIG: A GDSC PH Info Session Event
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">June 03, 2023</p>
-              </div>
-            </div>
-          </div>        
-
+        {posts.map((post) => (
           <div class="group relative drop-shadow-xl">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-100">
-              
-            <Image
-		        src={TSAngular}
-		        alt="Blue Pyramid Figure"
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full"
-	        />
-
+            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-violet-900 lg:aspect-none group-hover:opacity-50 lg:h-100">
+              <Image
+              src={post.data.heroImage}
+              alt="Blue Pyramid Figure"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+              />
             </div>
             <div class="mt-4 flex justify-between">
               <div>
                 <h3 class="text-sm text-gray-900">
                   <a href="#">
                     <span aria-hidden="true" class="absolute inset-0"></span>
-                    TS x Angular: ...Ready for it?
+                    {post.data.title}
                   </a>
                 </h3>
-                <p class="mt-1 text-sm text-gray-500">May 07, 2023</p>
+                <p class="mt-1 text-sm text-gray-500">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
               </div>
             </div>
-          </div>     
-          
-          <div class="group relative drop-shadow-xl">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-100">
-              
-            <Image
-		        src={Intronode}
-		        alt="Blue Pyramid Figure"
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full"
-	        />
-
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-900">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Introduction to Node JS
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">May 06, 2023</p>
-              </div>
-            </div>
-          </div>            
-  
-        <!-- More products... -->
-      </div>
+          </div> 
+        ))}
+      </div>      
     </div>
   </div>
