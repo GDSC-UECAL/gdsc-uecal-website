@@ -1,21 +1,32 @@
 ---
 import { Image } from "astro:assets";
 import Vision from "../../assets/about/vision.png";
+import Divider from "../../assets/divider.svg";
 import Aspire from "../../assets/about/aspire.png";
 import Build from "../../assets/about/build.png";
 import Connect from "../../assets/about/connect.png";
 ---
 
-<section class="py-24 px-8 md:px-24">
+<div class="lg:container-fluid lg:mx-auto">
+
+    <Image
+        src={Divider}
+        alt="Divider"
+        class="xl:w-screen"
+    />    
+    
+</div>
+
+<section class="py-12 px-8 md:px-24">
     <div
-    class="max-w-7xl mx-auto px-6 sm:px-24 lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-32"
+    class="max-w-7xl mx-auto px-6 sm:px-24 lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-16"
 >    
     <!-- <div class="flex flex-col md:flex-row gap-8 py-32"> -->
 
         <Image
             src={Vision}
             alt="Vision Picture"
-            class="w-auto lg:16 h-auto mx-auto lg:mx-0"
+            class="w-full h-auto lg:w-auto mx-auto"
         />
 
         <div class="w-full md:w-auto">
@@ -30,51 +41,79 @@ import Connect from "../../assets/about/connect.png";
             
         </div>
     </div>
-    <div class="max-w-screen-x">
-        <div class="max-w-screen-md text-left mb-8 lg:mb-12">
-            <h1 class="text-3xl md:text-5xl tracking-tight font-extrabold text-[#792A87] mb-4">Mission</h1>
-            <p class="text-lg md:text-2xl">The organization aims to do the ABC:</p>
-        </div>
-        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 content-center">
-            <div class="flex flex-col p-6 mb-4 mx-auto max-w-sm text-center bg-[#7D78780D] rounded-3xl shadow-md shadow-black/25">
-                
-                <h1 class="text-2xl md:text-4xl font-bold mb-6 text-[#F6BC15]">Aspire</h1>
-                
-                <p class="text-lg md:text-2xl leading-relaxed">
-                    Individuals to grow with the help of peer-to-peer learning
-                </p>
 
-                <div class="mx-auto text-center py-5">
-                    <Image
-                        src={Aspire} alt="Aspire Icon" class="w-12 h-auto"
-                    />
+
+    <div class="bg-white">
+        <div class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900">Previous Events</h2>
+    
+            <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 xl:gap-x-8 content-center items-center">
+                <!-- Event 1 -->
+                <div class="group relative shadow-md shadow-black/25">
+                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-[#F9F8F8] lg:aspect-none lg:h-auto">
+
+                        <div class="p-5 py-14 items-center content-center text-center">
+                            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-[#F6BC15]">Aspire</h1>
+
+                            <p class="text-lg sm:text-xl leading-relaxed mb-4">
+                                Individuals to grow with the help of peer-to-peer learning.
+                            </p>                             
+
+                            <Image
+                                src={Aspire}
+                                alt="Divider"
+                                class="w-12 h-auto py-3 mx-auto"
+                            />                     
+                        </div>
+
+                    </div>
                 </div>
+    
+                <!-- Event 2 -->
+                <div class="group relative shadow-md shadow-black/25">
+                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-[#F9F8F8] lg:aspect-none lg:h-auto">
 
-            </div>
-            <div class="flex flex-col p-6 mx-auto max-w-sm text-center bg-[#7D78780D] rounded-3xl shadow-md shadow-black/25">
-                <h1 class="text-2xl md:text-4xl font-bold mb-6 text-[#47A94C]">Build</h1>
-                <p class="text-lg md:text-2xl leading-relaxed">
-                    Experience and meaningful technologies to empower communities
-                </p>
+                        <div class="p-5 py-14 items-center content-center text-center">
+                            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-[#47A94C]">Build</h1>
 
-                <div class="mx-auto text-center py-5">
-                    <Image
-                        src={Build} alt="Aspire Icon" class="w-12 h-auto"
-                    />
-                </div>            
-            </div>
-            <div class="flex flex-col p-6 mx-auto max-w-sm text-center bg-[#7D78780D] rounded-3xl shadow-md shadow-black/25">
-                <h1 class="text-2xl md:text-4xl font-bold mb-6 text-[#438ECC]">Connect</h1>
-                <p class="text-lg md:text-2xl leading-relaxed">
-                    With people through the community and organizations to grow your network
-                </p>
+                            <p class="text-lg sm:text-xl leading-relaxed mb-4">
+                                Experience and meaningful technologies to empower communities.
+                            </p>                             
 
-                <div class="mx-auto text-center py-5">
-                    <Image
-                        src={Connect} alt="Aspire Icon" class="w-12 h-auto"
-                    />
-                </div>                
+                            <Image
+                                src={Build}
+                                alt="Divider"
+                                class="w-12 h-auto py-3 mx-auto"
+                            />                     
+                        </div>                        
+
+                    </div>
+                </div>
+    
+                <!-- Event 3 -->
+                <div class="group relative shadow-md shadow-black/25">
+                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-[#F9F8F8] lg:aspect-none lg:h-auto">
+
+                        <div class="p-5 py-14 items-center content-center text-center">
+                            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-[#438ECC]">Connect</h1>
+
+                            <p class="text-lg sm:text-xl leading-relaxed mb-4">
+                                With people through the community and organizations to grow your network.
+                            </p>                             
+
+                            <Image
+                                src={Connect}
+                                alt="Divider"
+                                class="w-12 h-auto py-3 mx-auto"
+                            />                     
+                        </div>
+
+                    </div>
+                </div>
+    
+                <!-- More events... -->
             </div>
         </div>
     </div>
+    
   </section>
