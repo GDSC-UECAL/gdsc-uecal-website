@@ -4,21 +4,25 @@ import { getCollection } from "astro:content";
 const posts = (await getCollection("events")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const allEvents = posts.slice(1)
 ---
 
-<section class="py-24">
+<section class="pb-24">
     <div class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center">
         <h1 class="text-3xl md:text-5xl text-center font-bold mb-16">All Events</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-20">
-            {posts.map((post) => (
-                <a href={`/events/${post.slug}/`} class="bg-[#F4F0F0] rounded-3xl border-2 p-8 lg:p-10 border-black cursor-pointer">
-                    <Image
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-20">
+            {allEvents.map((post) => (
+                <li class={`rounded-3xl border-2 p-8 lg:p-10 cursor-pointer shadow-md ${post.data.borderColor}`}>
+                    <a href={`/events/${post.slug}/`}>
+                        <Image
                         src={post.data.heroImage}
                         alt="Blue Pyramid Figure"
-                        class="h-full w-full rounded-3xl shadow-md object-cover object-center"
-                    />
-                </a>       
+                        class="h-full w-full rounded-3xl border-2 object-cover shadow-md object-center"
+                        />
+                    </a>
+                </li>
             ))}
-        </div>
+        </ul>
     </div>
 </section>

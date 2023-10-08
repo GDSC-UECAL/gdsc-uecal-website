@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import FormattedDate from "../FormattedDate.astro";
+import Button from "../Button.astro";
 const posts = (await getCollection("events")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -11,20 +12,22 @@ const featuredPost = posts[0];
 <section class="py-24">
     <div class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center">
         <h1 class="text-3xl md:text-5xl text-center font-bold mb-16">Featured Events</h1>
-        <div class="flex flex-row justify-center h-96 items-center p-8 gap-12">
-            <Image
-                src={featuredPost.data.heroImage}
-                alt="Blue Pyramid Figure"
-                class="h-full w-full rounded-3xl shadow-md object-cover object-center"
-            />
-            <div>
-                <h2 class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6">
-                    {featuredPost.data.title}
-                </h2>
-                <p class="mt-1 text-sm text-gray-500">
-                    <FormattedDate date={featuredPost.data.pubDate} />
-                </p>
+            <div class="flex flex-col lg:flex-row justify-center border border-slate-400 shadow-md rounded-3xl h-full items-center p-8 gap-12 ">
+                <Image
+                    src={featuredPost.data.heroImage}
+                    alt="Blue Pyramid Figure"
+                    class="h-full w-80 rounded-3xl shadow-md object-cover object-center"
+                />
+                <div class="flex flex-col items-start md:justify-center">
+                    <h2 class="text-center lg:text-start font-bold text-2xl sm:text-4xl leading-none mb-5 md:mb-2">
+                        {featuredPost.data.title}
+                    </h2>
+                    <p class="mt-1 text-lg text-left text-gray-500 mb-8">
+                        <!-- <FormattedDate date={featuredPost.data.pubDate} /> -->
+                        {featuredPost.body.slice(0, 200) + "..."}
+                    </p>
+                    <Button class="pb-1" asLink={true} href={`/events/${featuredPost.slug}/`}>Read More</Button>
+                </div>
             </div>
-        </div>
     </div>
 </section>
