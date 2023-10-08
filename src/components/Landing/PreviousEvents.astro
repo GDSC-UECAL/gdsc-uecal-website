@@ -22,7 +22,7 @@ const posts = (await getCollection("events")).sort(
   }
   ```
 -->
-<div class="bg-gradient-to-b from-orange-200 via-cyan-300 to-rose-300 py-32">
+<div class="bg-gradient-to-b from-orange-200 via-cyan-300 to-rose-300 py-14">
     <div class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       
       <h2 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-12">Previous Events</h2>
@@ -30,7 +30,7 @@ const posts = (await getCollection("events")).sort(
       <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {posts.map((post) => (
           <div class="group relative drop-shadow-xl">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-violet-900 lg:aspect-none group-hover:opacity-50 lg:h-100">
+            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-violet-900 lg:aspect-none group-hover:opacity-75 lg:h-100">
               <Image
               src={post.data.heroImage}
               alt="Blue Pyramid Figure"
@@ -45,7 +45,7 @@ const posts = (await getCollection("events")).sort(
                     {post.data.title}
                   </a>
                 </h3>
-                <p class="mt-1 text-sm text-gray-500">
+                <p class="mt-1 text-md text-gray-500">
                   <FormattedDate date={post.data.pubDate} />
                 </p>
               </div>
