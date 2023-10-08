@@ -17,6 +17,7 @@ const events = defineCollection({
 			heroImage: image().refine((img) => img.width >= 1920, {
 				message: "Cover image must be at least 1920 pixels wide!",
 			}),
+		borderColor: z.string().optional(),
 	}),
 });
 

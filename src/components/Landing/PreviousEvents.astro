@@ -40,7 +40,7 @@ const posts = (await getCollection("events")).sort(
             <div class="mt-4 flex justify-between">
               <div>
                 <h3 class="text-sm text-gray-900">
-                  <a href="#">
+                  <a href={`/events/${post.slug}/`}>
                     <span aria-hidden="true" class="absolute inset-0"></span>
                     {post.data.title}
                   </a>
