@@ -18,14 +18,15 @@ const featuredPost = posts[0];
                     alt="Blue Pyramid Figure"
                     class="h-full w-80 rounded-3xl shadow-md object-cover object-center"
                 />
-                <div class="flex flex-col items-center md:items-start md:justify-center">
-                    <h2 class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-2">
+                <div class="flex flex-col items-start md:justify-center">
+                    <h2 class="text-center lg:text-start font-bold text-2xl sm:text-4xl leading-none mb-5 md:mb-2">
                         {featuredPost.data.title}
                     </h2>
-                    <p class="mt-1 text-lg text-center lg:text-left text-gray-500 mb-10 md:mb-12">
-                        <FormattedDate date={featuredPost.data.pubDate} />
+                    <p class="mt-1 text-lg text-left text-gray-500 mb-8">
+                        <!-- <FormattedDate date={featuredPost.data.pubDate} /> -->
+                        {featuredPost.body.slice(0, 200) + "..."}
                     </p>
-                    <Button asLink={true} href={`/events/${featuredPost.slug}/`}>See Details</Button>
+                    <Button class="pb-1" asLink={true} href={`/events/${featuredPost.slug}/`}>Read More</Button>
                 </div>
             </div>
     </div>

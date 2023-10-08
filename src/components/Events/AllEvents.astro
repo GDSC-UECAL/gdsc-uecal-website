@@ -8,7 +8,7 @@ const posts = (await getCollection("events")).sort(
 const allEvents = posts.slice(1)
 ---
 
-<section class="py-24">
+<section class="pb-24">
     <div class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center">
         <h1 class="text-3xl md:text-5xl text-center font-bold mb-16">All Events</h1>
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-20">
@@ -18,7 +18,7 @@ const allEvents = posts.slice(1)
                         <Image
                         src={post.data.heroImage}
                         alt="Blue Pyramid Figure"
-                        class="h-full w-full rounded-3xl border-2 object-cover object-center"
+                        class="h-full w-full rounded-3xl border-2 object-cover shadow-md object-center"
                         />
                     </a>
                 </li>
