@@ -1,20 +1,26 @@
 ---
 import { Image } from "astro:assets";
+import One from "../../assets/about/1.png";
+import Two from "../../assets/about/2.png";
+import Three from "../../assets/about/3.png";
+import Four from "../../assets/about/4.png";
+import Five from "../../assets/about/5.png";
+import Six from "../../assets/about/6.png";
 ---
 
-<section class="py-14">
+<section class="py-24">
 	<div class="flex flex-col">
         <div class="flex flex-col justify-center items-center p-8">
 
             <h1
-				class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none"
+				class="text-center lg:text-start font-bold text-4xl sm:text-4xl leading-none"
 			>
-				To Grow and To <h1 class="text-5xl mb-6 text-center font-bold from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent">
+				To Grow and To <h1 class="text-6xl mb-6 text-center font-bold from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent">
                     Igma Kadima
                 </h1>
             </h1>        
 
-            <div class="mx-auto max-w-2xl px-6 py-6 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8">
+            <div class="mx-auto max-w-2xl px-14 py-6 sm:px-6 sm:py-14 lg:max-w-7xl lg:px-14">
                 <p class="text-lg md:text-3xl leading-relaxed mb-4">
                     Google Developer Student Clubs UE Caloocan is a student-led technology 
                     organization situated at the University of The East in Caloocan City. 
@@ -26,3 +32,61 @@ import { Image } from "astro:assets";
         </div>
 	</div>
 </section>
+
+<!-- Images -->
+
+<div class="container mx-auto px-2 sm:px-14 pb-44 lg:px-14 md:px-14">
+    <div class="-m-1 flex flex-wrap md:-m-2">
+      <div class="flex w-full md:w-1/2 flex-wrap">
+        <div class="w-1/2 p-1 md:p-2">
+          
+            <Image
+                src={One}
+                alt="One"
+                class="block h-full w-full rounded-md object-cover object-center"
+            />          
+            
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          
+            <Image
+                src={Two}
+                alt="One"
+                class="block h-full w-full rounded-md object-cover object-center"
+            />    
+          
+        </div>
+        <div class="w-full p-1 md:p-2">
+            <Image
+                src={Three}
+                alt="One"
+                class="block h-full w-full rounded-md object-cover object-center"
+            />    
+        </div>
+      </div>
+      <div class="flex w-full md:w-1/2 flex-wrap">
+        <div class="w-full p-1 md:p-2">
+            <Image
+                src={Four}
+                alt="One"
+                class="block h-full w-full rounded-md object-cover object-center"
+            />    
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+            <Image
+                src={Five}
+                alt="One"
+                class="block h-full w-full rounded-md object-cover object-center"
+            />    
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+            <Image
+                src={Six}
+                alt="One"
+                class="block h-full w-full rounded-md object-cover object-center"
+            />    
+        </div>
+      </div>
+    </div>
+  </div>
+  
