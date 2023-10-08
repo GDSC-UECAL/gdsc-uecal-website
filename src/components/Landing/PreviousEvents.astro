@@ -22,7 +22,7 @@ const posts = (await getCollection("events")).sort(
   }
   ```
 -->
-<div class="bg-gradient-to-b from-orange-200 via-cyan-300 to-rose-300 py-32">
+<div class="bg-gradient-to-b from-orange-200 via-cyan-300 to-rose-300 py-14">
     <div class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       
       <h2 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-12">Previous Events</h2>
@@ -39,13 +39,13 @@ const posts = (await getCollection("events")).sort(
             </div>
             <div class="mt-4 flex justify-between">
               <div>
-                <h3 class="text-sm text-gray-900">
+                <h3 class="text-md text-gray-900">
                   <a href="#">
                     <span aria-hidden="true" class="absolute inset-0"></span>
                     {post.data.title}
                   </a>
                 </h3>
-                <p class="mt-1 text-sm text-gray-500">
+                <p class="mt-1 text-md text-gray-500">
                   <FormattedDate date={post.data.pubDate} />
                 </p>
               </div>
