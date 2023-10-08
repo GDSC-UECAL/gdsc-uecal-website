@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Logo from "../../assets/gdsclogo.svg";
 import Vision from "../../assets/about/vision.png";
+import Divider from "../../assets/divider.svg";
 ---
 
 <section class="py-24">
@@ -30,3 +31,13 @@ import Vision from "../../assets/about/vision.png";
         </div>
 	</div>
 </section>
+
+<div class="lg:container-fluid lg:mx-auto">
+
+    <Image
+        src={Divider}
+        alt="Divider"
+        class="xl:w-screen"
+    />    
+    
+</div>
