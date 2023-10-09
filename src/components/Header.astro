@@ -50,14 +50,15 @@ import Button from "./Button.astro";
 		  </svg>
 	  </button>
 	  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-		<ul class="font-medium flex flex-col p-4 md:p-0 mt-4 text-dark rounded-lg bg-gray-900 md:flex-row md:space-x-8 md:mt-0 md:bg-dark dark:bg-gray-800 md:dark:bg-gray-900 shadow-md">
+		<ul class="font-medium flex flex-col p-4 md:p-0 mt-4 text-dark rounded-lg md:flex-row md:space-x-8 md:mt-0">
 			<HeaderLink href="/"
-			class="block py-2 pl-3 pr-4 text-dark bg-gray-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500">
+			class="block py-4 pl-3 pr-4 text-dark bg-gray-700 rounded md:bg-transparent  md:p-0 dark:text-white">
 				Home</HeaderLink>
-			<HeaderLink href="/about" class="block py-2 pl-3 pr-4 text-dark bg-gray-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500">
+			<HeaderLink href="/about" class="block py-4 bg-gray-700 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0 dark:text-white">
 				About</HeaderLink>
-			<HeaderLink href="/events" class="block py-2 pl-3 pr-4 text-dark bg-gray-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500">
+			<HeaderLink href="/events" class="block py-4 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0 dark:text-white">
 				Events</HeaderLink>
+			<Button asLink={true} href="/about" class="block py-4">Become a member</Button>
 		</ul>
 	  </div>
 	</div>
