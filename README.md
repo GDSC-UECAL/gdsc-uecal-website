@@ -58,7 +58,7 @@ GDSC UE Caloocan Website is Copyright © 2023' – 2024'. It is distributed unde
 
 GDSC UE Caloocan Website contains the following third-party libraries:
 - <a href="https://astro.build/"> Astro JS </a> - modern web development framework that allows developers to create fast and lightweight websites.
-- <a href="https://react.dev/"> React JS </a> - a JavaScript library developed by Facebook.
+- <a href="https://tailwindcss.com/"> Tailwind CSS </a> - an open source CSS framework.
 
 <br />
 
