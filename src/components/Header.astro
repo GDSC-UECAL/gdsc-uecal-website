@@ -117,7 +117,7 @@ import Button from "./Button.astro";
   });
 
   window.addEventListener("scroll", function () {
-    if (navbar) {
+    if (navbar && window.location.pathname == "/") {
       if (window.scrollY > 0) {
         navbar.classList.add("bg-purple-950");
         navbar.classList.add("backdrop-filter");
