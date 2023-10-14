@@ -1,15 +1,14 @@
 module.exports = {
   trailingComma: "es5",
   tabWidth: 2,
-  semi: false,
   singleQuote: false,
   plugins: ["prettier-plugin-astro"],
   overrides: [
     {
-      files: "**/*astro",
+      files: "*.astro",
       options: {
         parser: "astro",
       },
     },
   ],
-}
+};

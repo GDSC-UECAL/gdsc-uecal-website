@@ -9,19 +9,19 @@ import Chapters from "../components/About/Chapters.astro";
 import { SITE_DESCRIPTION } from "../consts";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={"Home"} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="text-gray-700">
-		<Header />
-		<main>
-			<AboutSection />
-			<IgmaKadima />
-			<Mission />
-			<Chapters />
-			<Footer />
-		</main>
-	</body>
+  <head>
+    <BaseHead title={"About"} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="text-gray-700">
+    <Header />
+    <main>
+      <AboutSection />
+      <IgmaKadima />
+      <Mission />
+      <Chapters />
+      <Footer />
+    </main>
+  </body>
 </html>
