@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import One from "../../assets/about/1.png";
-import Two from "../../assets/about/2.png";
-import Three from "../../assets/about/3.png";
-import Four from "../../assets/about/4.png";
-import Five from "../../assets/about/5.png";
-import Six from "../../assets/about/6.png";
+import One from "../../assets/about/1.jpg";
+import Two from "../../assets/about/2.jpg";
+import Three from "../../assets/about/3.jpg";
+import Four from "../../assets/about/4.jpg";
+import Five from "../../assets/about/5.jpg";
+import Six from "../../assets/about/6.jpg";
 ---
 
-<section class="py-24" id="about-igmakadima">
+<section class="pt-24" id="about-igmakadima">
 	<div class="flex flex-col">
         <div class="flex flex-col justify-center items-center p-8">
 
@@ -34,51 +34,51 @@ import Six from "../../assets/about/6.png";
 
 <!-- Images -->
 
-<div class="container mx-auto px-6 py-32 md:px-32">
+<div class="container mx-auto py-32 px-8 sm:px-24 max-w-7xl">
     <div class="-m-1 flex flex-wrap md:-m-2">
       <div class="flex w-1/2 flex-wrap">
         <div class="w-1/2 p-1 md:p-2">
             <Image
                 src={One}
                 alt="One"
-                class="block h-full w-full object-cover object-center"
+                class="block h-full w-full rounded-lg object-cover object-center"
             /> 
         </div>
         <div class="w-1/2 p-1 md:p-2">
             <Image
-                src={One}
+                src={Two}
                 alt="One"
-                class="block h-full w-full object-cover object-center"
+                class="block h-full w-full rounded-lg object-cover object-center"
             /> 
         </div>
         <div class="w-full p-1 md:p-2">
             <Image
-                src={One}
+                src={Three}
                 alt="One"
-                class="block h-full w-full object-cover object-center"
+                class="block h-full w-full rounded-lg object-cover object-center"
             /> 
         </div>
       </div>
       <div class="flex w-1/2 flex-wrap">
         <div class="w-full p-1 md:p-2">
             <Image
-                src={One}
+                src={Four}
                 alt="One"
-                class="block h-full w-full object-cover object-center"
+                class="block h-full w-full rounded-lg object-cover object-center"
             /> 
         </div>
         <div class="w-1/2 p-1 md:p-2">
             <Image
-                src={One}
+                src={Five}
                 alt="One"
-                class="block h-full w-full object-cover object-center"
+                class="block h-full w-full rounded-lg object-cover object-center"
             /> 
         </div>
         <div class="w-1/2 p-1 md:p-2">
             <Image
-                src={One}
+                src={Six}
                 alt="One"
-                class="block h-full w-full object-cover object-center"
+                class="block h-full w-full rounded-lg object-cover object-center"
             /> 
         </div>
       </div>
