@@ -26,11 +26,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					)}
 				</div>
 				<div class="max-w-screen-md mx-auto mt-12 p-4 prose text-gray-dark">
-					<div class="mb-4 py-4 text-center">
-						<h2 class="text-center font-bold text-2xl md:text-4xl leading-none mb-4">
+					<div class="mb-4 py-4 text-start">
+						<h2 class="text-start font-bold text-2xl md:text-4xl leading-none mb-4">
 							{title}
 						</h2>
-						<div class="mt-1 text-md md:text-lg text-center text-gray-500">
+						<div class="mt-1 text-md md:text-lg text-start text-gray-500 mb-4">
 							<FormattedDate date={pubDate} />
 							{updatedDate && (
 								<div class="italic">
