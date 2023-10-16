@@ -22,12 +22,12 @@ const posts = (await getCollection("events")).sort(
   }
   ```
 -->
-<div class="bg-gradient-to-b from-orange-200 via-cyan-300 to-rose-300 py-14">
+<div class="bg-[url(events.jpg)] bg-cover bg-center bg-no-repeat bg-fixed relative py-12">
     <div class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       
-      <h2 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-12">Previous Events</h2>
+      <h2 class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-12">Events</h2>
 
-      <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+      <div class="mt-6 grid grid-cols-1 gap-x-6 gap-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {posts.map((post) => (
           <div class="group relative drop-shadow-xl">
             <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-violet-900 lg:aspect-none group-hover:opacity-75 lg:h-100">
@@ -39,7 +39,7 @@ const posts = (await getCollection("events")).sort(
             </div>
             <div class="mt-4 flex justify-between">
               <div>
-                <h3 class="text-sm text-gray-900">
+                <h3 class="text-md font-semibold text-gray-900">
                   <a href={`/events/${post.slug}/`}>
                     <span aria-hidden="true" class="absolute inset-0"></span>
                     {post.data.title}
@@ -52,6 +52,16 @@ const posts = (await getCollection("events")).sort(
             </div>
           </div> 
         ))}
-      </div>      
+      </div>   
+
+      <div class="flex justify-end py-12">
+        <a href="/events" class="flex items-center justify-center px-6 text-md font-medium bg-purple-900 px-4 py-2 text-white text-base font-medium rounded shadow-sm hover:bg-purple-950 transition-all">
+          See more...
+          <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+        </a>
+      </div>
+
     </div>
   </div>
