@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import FormattedDate from "../FormattedDate.astro";
 const posts = (await getCollection("events")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -18,10 +19,24 @@ const allEvents = posts.slice(1)
                         <Image
                         src={post.data.heroImage}
                         alt="Blue Pyramid Figure"
-                        class="h-full w-full rounded-3xl border-2 object-cover shadow-md object-center"
+                        class="h-full w-100 rounded-3xl border-2 object-cover shadow-md object-center"
                         />
                     </a>
+                    <div class="py-4 flex justify-between">
+                    <div>
+                        <h3 class="text-md font-semibold text-gray-900">
+                        <a href={`/events/${post.slug}/`}>
+                            <span aria-hidden="true" class="absolute inset-0"></span>
+                            {post.data.title}
+                        </a>
+                        </h3>
+                        <p class="mt-1 text-md text-gray-500">
+                        <FormattedDate date={post.data.pubDate} />
+                        </p>
+                    </div>
+                    </div>                                    
                 </li>
+
             ))}
         </ul>
     </div>
