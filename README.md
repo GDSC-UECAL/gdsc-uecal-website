@@ -22,7 +22,7 @@ Google Developer Student Clubs University of the East Caloocan is a community gr
 | Aidan Del Pilar | Data Science Lead | Media Assets & Content Writting |
 | Aronn Duran | Associate Data Science Lead | Wireframing & Content Writting |
 | Joshua Aus | Associate Data Science Lead | Media Assets & Content Writting |
-| Cyrus Mante | Member | Facilitator |
+| Cyrus Mante | Chief Consultant | Facilitator |
   
 <br />
 
