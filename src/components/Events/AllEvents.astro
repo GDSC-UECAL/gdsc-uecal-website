@@ -5,7 +5,6 @@ import FormattedDate from "../FormattedDate.astro";
 const posts = (await getCollection("events")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
 const allEvents = posts.slice(1)
 ---
 
@@ -14,29 +13,26 @@ const allEvents = posts.slice(1)
         <h1 class="text-3xl md:text-5xl text-center font-bold mb-16">All Events</h1>
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-20">
             {allEvents.map((post) => (
-                <li class={`rounded-3xl border-2 p-8 lg:p-10 cursor-pointer shadow-md ${post.data.borderColor}`}>
-                    <a href={`/events/${post.slug}/`}>
+                <a href={`/events/${post.slug}/`}>
+                    <li class={`rounded-3xl border-2 p-8 lg:p-10 cursor-pointer shadow-md ${post.data.borderColor}`}>
                         <Image
                         src={post.data.heroImage}
                         alt="Blue Pyramid Figure"
-                        class="h-full w-100 rounded-3xl border-2 object-cover shadow-md object-center"
+                        class="h-96 w-full rounded-3xl border-2 object-contain shadow-md object-center"
                         />
-                    </a>
-                    <div class="py-4 flex justify-between">
-                    <div>
-                        <h3 class="text-md font-semibold text-gray-900">
-                        <a href={`/events/${post.slug}/`}>
-                            <span aria-hidden="true" class="absolute inset-0"></span>
-                            {post.data.title}
-                        </a>
-                        </h3>
-                        <p class="mt-1 text-md text-gray-500">
-                        <FormattedDate date={post.data.pubDate} />
-                        </p>
-                    </div>
-                    </div>                                    
-                </li>
-
+                        
+                        <div class="pt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-md font-semibold text-gray-900">
+                                {post.data.title}
+                            </h3>
+                            <p class="mt-1 text-md text-gray-500">
+                                <FormattedDate date={post.data.pubDate} />
+                            </p>
+                        </div>
+                        </div>                                    
+                    </li>
+                </a>
             ))}
         </ul>
     </div>
