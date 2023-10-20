@@ -2,7 +2,7 @@
 <img align="center" alt="Footer" width="150px" src ="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_stacked_5giak2X.svg"/>
 </p>
 
-<h1 align="center">Google Developer Student Club UE Caloocan Website </h1>
+<h1 align="center">Google Developer Student Club UE Caloocan Website</h1>
 
 Google Developer Student Clubs University of the East Caloocan is a community group for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome.
 
