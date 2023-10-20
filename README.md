@@ -10,20 +10,21 @@ Google Developer Student Clubs University of the East Caloocan is a community gr
 **Founder Contributors** of the project:
 | Name | Position | Role |
 | :--- | :----   | :--- |
-| Kurt Calacday | Web Development Lead | Project Head, Front-End Developement & Documentation |
-| Kurt Cadenas | Chief Technology Officer | Project Head & Back-End Developement |
+| Kurt Calacday | **Web Development Lead** | Project Head, Front-End Developement & Documentation |
+| Kurt Cadenas | **Chief Technology Officer** | Project Head & Back-End Developement |
 | Deihl Reyes | Associate Web Development Lead | Front-End Developement |
 | Red Pangilinan | Associate Web Development Lead | Front-End Developement |
-| Emmanuel Forfieda | Chief Executive Officer | Content Writter |
-| Phillip Jan Moran | Chief Consultant Officer | Front-End Development |
+| Emmanuel Forfieda | **Chief Executive Officer** | Content Writter |
+| Phillip Jan Moran | **Former Chief Technology Officer** | Front-End Development |
 | Patrick Arganza | Mobile Development Lead | Front-End Development |
 | Mochi Aseoche | UI / UX Development Lead | UI / UX Development & Wireframing |
 | Adrian Cuevas | Cloud Development Lead | Cloud Engineer & Web Deployment |
 | Aidan Del Pilar | Data Science Lead | Media Assets & Content Writting |
 | Aronn Duran | Associate Data Science Lead | Wireframing & Content Writting |
 | Joshua Aus | Associate Data Science Lead | Media Assets & Content Writting |
-| Cyrus Mante | Chief Consultant | Facilitator |
-  
+| Cyrus Mante | **Chief Consultant** | Facilitator |
+ 
+
 <br />
 
 # 📝 References
