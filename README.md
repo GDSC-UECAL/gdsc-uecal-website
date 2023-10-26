@@ -24,7 +24,6 @@ Google Developer Student Clubs University of the East Caloocan is a community gr
 | Joshua Aus | Associate Data Science Lead | Media Assets & Content Writting |
 | Cyrus Mante | **Chief Consultant** | Facilitator |
  
-
 <br />
 
 # 📝 References
