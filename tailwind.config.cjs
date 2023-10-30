@@ -25,6 +25,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+				
 			},
 			animation: {
 				typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
