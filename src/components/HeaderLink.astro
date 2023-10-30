@@ -9,9 +9,6 @@ const { pathname } = Astro.url;
 const isActive = href === pathname || href === pathname.replace(/\/$/, "");
 const linkClasses = `${className}`;
 
-// ? "font-medium text-white hover:text-gray-100"
-// : "font-medium text-gray-300 hover:text-gray-100";
-
 // Determine active state for each link state
 const activeStyles = isActive
 	? "font-medium text-gray-300 hover:text-gray-100"

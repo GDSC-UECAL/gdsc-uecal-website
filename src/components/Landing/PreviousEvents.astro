@@ -6,23 +6,9 @@ import FormattedDate from "../FormattedDate.astro";
 const posts = (await getCollection("events")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-const recentPosts = posts.slice(0, 8);
+const recentPosts = posts.slice(0, 4);
 ---
 
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
 <div class="bg-[url(events.jpg)] bg-cover bg-center bg-no-repeat bg-fixed relative py-12">
     <div class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       
@@ -57,10 +43,7 @@ const recentPosts = posts.slice(0, 8);
 
       <div class="flex justify-end py-12">
         <a href="/events" class="flex items-center justify-center px-6 text-md font-medium bg-purple-900 px-4 py-2 text-white text-base font-medium rounded shadow-sm hover:bg-purple-950 transition-all">
-          See more...
-          <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-          </svg>
+          See more...          
         </a>
       </div>
 
