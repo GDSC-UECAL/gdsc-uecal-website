@@ -65,4 +65,5 @@ GDSC UE Caloocan Website contains the following third-party libraries:
 <p align=center>
 <img align="center" alt="Footer" width="150px" src ="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_stacked_5giak2X.svg"/>
 </p>
+
 <p align=center> © 2023 Developer Student Club UE Caloocan </p>
