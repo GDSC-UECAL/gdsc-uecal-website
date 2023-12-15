@@ -14,7 +14,7 @@ const events = defineCollection({
 			.string()
 			.optional()
 			.transform((str) => (str ? new Date(str) : undefined)),
-			heroImage: image().refine((img) => img.width >= 1080, {
+			heroImage: image().refine((img) => img.width >= 500, {
 				message: "Cover image must be at least 1080 pixels wide!",
 			}),
 		borderColor: z.string().optional(),
