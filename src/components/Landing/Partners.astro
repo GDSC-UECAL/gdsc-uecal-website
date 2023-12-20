@@ -1,6 +1,84 @@
 ---
 import { Image } from "astro:assets";
+import ACSS from "../../assets/landing/logo_acss.png";
+import COESS from "../../assets/landing/logo_coess.png";
+import LITS from "../../assets/landing/logo_lits.png";
 ---
 
+<section class="py-12">
+    <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
 
-<!-- Hello -->
+        <h2 class="text-3xl text-gray-600 mb-6 leading-none">
+            Brought to you by
+        </h2>
+
+        <h1 class="text-center lg:text-center font-bold text-3xl sm:text-4xl leading-none mb-6">
+            Partners and Sponsors
+        </h1>
+
+        <span class="text-gray-700 ">
+            Google Developer Student Clubs - University of the East Caloocan is also supported by an amazing network of partners and sponsors.
+        </span>
+
+        <!-- Recognized Student Organization(s) -->
+        <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+            
+            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+
+                <Image
+                    src={ACSS}
+                    alt="Association of Computer Studies Students"
+                    class="w-24 h-24 rounded-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                />
+            </a>
+
+            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+
+                <Image
+                    src={COESS}
+                    alt="Computer Engineering Students Society"
+                    class="w-24 h-24 rounded-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                />                
+            </a>
+            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+
+                <Image
+                    src={LITS}
+                    alt="League of Information Technology Students"
+                    class="w-24 h-24 rounded-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                />                   
+            </a>         
+        </div>
+
+        <!-- Company/Business -->
+        <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+            
+            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+
+                <Image
+                    src={ACSS}
+                    alt="Association of Computer Studies Students"
+                    class="w-24 h-24 rounded-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                />
+            </a>
+
+            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+
+                <Image
+                    src={COESS}
+                    alt="Computer Engineering Students Society"
+                    class="w-24 h-24 rounded-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                />                
+            </a>
+            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+
+                <Image
+                    src={LITS}
+                    alt="League of Information Technology Students"
+                    class="w-24 h-24 rounded-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                />                   
+            </a>         
+        </div>        
+
+    </div> 
+</section>
