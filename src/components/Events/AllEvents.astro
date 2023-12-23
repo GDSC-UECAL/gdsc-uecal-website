@@ -2,17 +2,32 @@
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import FormattedDate from "../FormattedDate.astro";
+import Pagination from "../Pagination.astro";
+
+const { page } = Astro.props;
+
 const posts = (await getCollection("events")).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-const allEvents = posts.slice(1)
+
+const allEvents = posts.slice(1);
+
+const itemsPerPage = 6;
+const currentPage = Number(page) || 1;
+const maxPages = Math.ceil(allEvents.length / itemsPerPage);
+
+const startIndex = (currentPage - 1) * itemsPerPage;
+const endIndex = startIndex + itemsPerPage;
+
+const paginatedEvents = allEvents.slice(startIndex, endIndex);
 ---
 
 <section class="pb-24">
-    <div class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center">
-        <h1 class="text-3xl md:text-5xl text-center font-bold mb-16">All Events</h1>
+    <div class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center gap-16">
+        <h1 class="text-3xl md:text-5xl text-center font-bold">All Events</h1>
+        <Pagination currentPage={currentPage} maxPages={maxPages} />
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-20">
-            {allEvents.map((post) => (
+            {paginatedEvents.map((post) => (
                 <a href={`/events/${post.slug}/`}>
                     <li class={`rounded-3xl border-2 p-8 lg:p-10 cursor-pointer shadow-md ${post.data.borderColor}`}>
                         <Image
@@ -35,5 +50,6 @@ const allEvents = posts.slice(1)
                 </a>
             ))}
         </ul>
+        <Pagination currentPage={currentPage} maxPages={maxPages} />
     </div>
 </section>

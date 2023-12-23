@@ -1,0 +1,14 @@
+---
+const { currentPage, maxPages } = Astro.props;
+
+const nextPage = currentPage + 1 <= maxPages ? currentPage + 1 : maxPages;
+const previousPage = currentPage - 1 >= 1 ? currentPage - 1 : 1;
+---
+
+<div class="flex justify-center gap-4 md:gap-8">
+  <a class={`rounded-2xl border-2 p-4 cursor-pointer shadow-md border-black w-[4rem] select-none text-center text-2xl ${currentPage === 1 ? 'opacity-50 pointer-events-none' : ''}`} 
+  href={currentPage === 1 ? '#' : `/events/${previousPage}`}>&lt;</a>
+  <p class="py-4 text-2xl">{currentPage}</p>
+  <a class={`rounded-2xl border-2 p-4 cursor-pointer shadow-md border-black w-[4rem] select-none text-center text-2xl ${currentPage === maxPages ? 'opacity-50 pointer-events-none' : ''}`} 
+  href={currentPage === maxPages ? '#' : `/events/${nextPage}`}>&gt;</a>
+</div>
