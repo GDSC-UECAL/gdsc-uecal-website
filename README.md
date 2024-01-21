@@ -2,7 +2,7 @@
 <img align="center" alt="Footer" width="150px" src ="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_stacked_5giak2X.svg"/>
 </p>
 
-<h1 align="center">Google Developer Student Club UE Caloocan Website </h1>
+<h1 align="center">Google Developer Student Club UE Caloocan Website</h1>
 
 Google Developer Student Clubs University of the East Caloocan is a community group for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome.
 
@@ -10,20 +10,20 @@ Google Developer Student Clubs University of the East Caloocan is a community gr
 **Founder Contributors** of the project:
 | Name | Position | Role |
 | :--- | :----   | :--- |
-| Kurt Calacday | Web Development Lead | Project Head, Front-End Developement & Documentation |
-| Kurt Cadenas | Chief Technology Officer | Project Head & Back-End Developement |
+| Kurt Calacday | **Web Development Lead** | Project Head, Front-End Developement & Documentation |
+| Kurt Cadenas | **Chief Technology Officer** | Project Head & Back-End Developement |
 | Deihl Reyes | Associate Web Development Lead | Front-End Developement |
 | Red Pangilinan | Associate Web Development Lead | Front-End Developement |
-| Emmanuel Forfieda | Chief Executive Officer | Content Writter |
-| Phillip Jan Moran | Chief Consultant Officer | Front-End Development |
+| Emmanuel Forfieda | **Chief Executive Officer** | Content Writter |
+| Phillip Jan Moran | **Former Chief Technology Officer** | Front-End Development |
 | Patrick Arganza | Mobile Development Lead | Front-End Development |
 | Mochi Aseoche | UI / UX Development Lead | UI / UX Development & Wireframing |
 | Adrian Cuevas | Cloud Development Lead | Cloud Engineer & Web Deployment |
 | Aidan Del Pilar | Data Science Lead | Media Assets & Content Writting |
 | Aronn Duran | Associate Data Science Lead | Wireframing & Content Writting |
 | Joshua Aus | Associate Data Science Lead | Media Assets & Content Writting |
-| Cyrus Mante | Member | Facilitator |
-  
+| Cyrus Mante | **Chief Consultant** | Facilitator |
+ 
 <br />
 
 # 📝 References
@@ -65,4 +65,5 @@ GDSC UE Caloocan Website contains the following third-party libraries:
 <p align=center>
 <img align="center" alt="Footer" width="150px" src ="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_stacked_5giak2X.svg"/>
 </p>
+
 <p align=center> © 2023 Developer Student Club UE Caloocan </p>
