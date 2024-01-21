@@ -33,7 +33,7 @@ module.exports = {
 		},
 	},
 	plugins: [
-		plugin(({ addUtilities, addComponents }) => {
+		plugin(({ addUtilities }) => {
 			addUtilities({
 				".text-gradient-purple": {
 					color: "transparent",
