@@ -24,18 +24,10 @@ Google Developer Student Clubs University of the East Caloocan is a community gr
 
 # 📝 References
 GDSC UE Caloocan Website contains the following study material references:
-- <a href="https://sharing.clickup.com/9008172421/g/h/4-90080336673-7/2283e58bd614cf9"> ClickUp Gantt Chart </a> - Project from start to finish with highly customizable views that make project planning a breeze.
 - <a href="https://www.gdscloyola.org/"> GDSC ADMU Loyala Website </a> - Website of GDSC, Ateneo de Manila University Loyola School.
 - <a href="https://github.com/gdsc-loyola/gdsc-loyola-website"> GDSC ADMU Loyala Github Repository </a> - Github Repository of GDSC, Ateneo de Manila University Loyola School.
 - <a href="https://www.figma.com/file/teAZAttivRLwWlLldnVS17/GDSC?type=design&node-id=0-1&t=YvpxERi6DIlzg4rt-0&fbclid=IwAR3zyYZskgf6e-MeAZSJwYYFJC9o2KX_tftb5SJjaa2o1KWdWh7N5lgo7d8"> GDSC ADMU Loyola Figma </a> - Our collaborative frontend web application prototype design workflow.
 - <a href="https://www.figma.com/file/mzwTAaoJuW9DDsEd2PSrW5/GDSC-UE-Caloocan-Website-(Copy)?type=design&mode=design&t=k8MTNbshIe5gvHWm-1"> **GDSC UE Caloocan Figma** </a> - Our collaborative frontend web application prototype design workflow.
-
-<br />
-
-# 🚀 Performance optimizations for the Website
-- <a href="https://developer.mozilla.org/en-US/docs/Glossary/Minification"> Minification </a> - process of removing unnecessary or redundant data without affecting how a resource is processed by the browser.
-- <a href="https://developer.mozilla.org/en-US/docs/Glossary/GZip_compression"> GZip Compression </a> - based on the Deflate algorithm that allows files to be made smaller in size which allows for faster network transfers.
-- <a href="https://developer.mozilla.org/en-US/docs/Glossary/Brotli_compression"> Brotli </a> - general-purpose lossless compression algorithm.
 
 <br />
 
