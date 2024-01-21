@@ -4,157 +4,188 @@ import Logo from "../assets/gdsclogo.svg";
 const today = new Date();
 ---
 
-<footer>
-	<div
-		class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
-	>
-		<div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-7">
-			<div class="md:max-w-md lg:col-span-3">
-				<div class="grid">
-					<a href="/">
-						<Image src={Logo} alt="GDSC Logo" class="w-14 h-auto" />
-					</a>
-					<span class="text-xl font-bold tracking-wide"
-						>Google Developer Student Clubs</span
-					>
-					<span class="tracking-wide">University of the East - Caloocan</span>
-				</div>
+<script>
+  // Get the current year
+  const currentYear: number = new Date().getFullYear();
 
-				<div class="mt-4 lg:max-w-sm">
-					<p class="text-sm">Together, we discover future.</p>
-					<p class="mt-4 text-sm">
-						Located inside the University.<br /> 105 Samson Road, Caloocan City,
-						1408. Metro Manila, PHI
-					</p>
-				</div>
-			</div>
-			<div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 justify-end">
-				<!-- Home -->
-				<div>
-					<p class="font-semibold tracking-wide">About us</p>
-					<ul class="mt-2 space-y-2">
-						<li>
-							<a
-								href="#home-events"
-								class="transition-colors duration-300 hover:text-purple-950"
-								>Events</a>
-						</li>
-						<li>
-							<a
-								href="#home-partners"
-								class="transition-colors duration-300 hover:text-purple-950"
-								>Partners and Sponsors</a>
-						</li>						
+  // Get the upcoming year
+  const nextYear: number = currentYear + 1;
 
-						<li>
-							<a
-								href="#home-email"
-								class="transition-colors duration-300 hover:text-purple-950"
-								>Email us</a>
-						</li>										
-					</ul>
-				</div>
+  // Update the span elements with the respective years
+  document.getElementById("currentYear")!.textContent = currentYear.toString();
+  document.getElementById("nextYear")!.textContent = nextYear.toString();
+</script>
 
-				<!-- About Us -->
-				<div>
-					<p class="font-semibold tracking-wide">About us</p>
-					<ul class="mt-2 space-y-2">
-						<li>
-							<a
-								href="about#about-mission"
-								class="transition-colors duration-300 hover:text-purple-950"
-								>Mission</a>
-						</li>
-						<li>
-							<a
-								href="about#about-vision"
-								class="transition-colors duration-300 hover:text-purple-950"
-								>Vision</a>
-						</li>
-						<li>
-							<a
-								href="about#about-igmakadima"
-								class="transition-colors duration-300 hover:text-purple-950"
-								>Igma Kadima</a>
-						</li>						
+<footer class="bg-white dark:bg-gray-900 px-14">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-7">
+      <div class="md:max-w-md lg:col-span-3">
+        <div class="grid">
+          <a href="/">
+            <Image src={Logo} alt="GDSC Logo" class="w-14 h-auto" />
+          </a>
+          <span
+            class="text-xl font-bold tracking-wide text-gray-800 dark:text-white"
+            >Google Developer Student Clubs</span
+          >
+          <span class="tracking-wide text-gray-800 dark:text-white"
+            >University of the East - Caloocan</span
+          >
+        </div>
 
-						<li>
-							<a
-								href="about#about-gdscchapters"
-								class="transition-colors duration-300 hover:text-purple-950"
-								>Other GDSC Chapters</a>
-						</li>										
-					</ul>
-				</div>
+        <div class="mt-4 lg:max-w-sm">
+          <p class="text-sm text-gray-700 dark:text-white">
+            Together, we discover future.
+          </p>
+          <p class="mt-4 text-sm text-gray-700 dark:text-white">
+            Located inside the University.<br /> 105 Samson Road, Caloocan City,
+            1408. Metro Manila, PHI
+          </p>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 justify-end">
+        <!-- Home -->
+        <div>
+          <p class="font-semibold tracking-wide">Home</p>
+          <ul class="mt-2 space-y-2">
+            <li>
+              <a
+                href="#home-events"
+                class="transition-colors duration-300 hover:text-purple-950"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a
+                href="#home-partners"
+                class="transition-colors duration-300 hover:text-purple-950"
+                >Partners and Sponsors</a
+              >
+            </li>
 
-				<!-- Contact Us  -->
-				<div>
-					<p class="font-semibold tracking-wide">Contact us</p>
-					<ul class="mt-2 space-y-2">
-						<li>
-							<a
-								href="mailto:gdsc.ue@gmail.com"
-								class="transition-colors duration-300 hover:underline"
-								>gdsc.ue@gmail.com</a>
-						</li>
-					</ul>
-				</div>
+            <li>
+              <a
+                href="#home-email"
+                class="transition-colors duration-300 hover:text-purple-950"
+                >Email us</a
+              >
+            </li>
+          </ul>
+        </div>
 
-				<!-- Contact Us  -->
-				<div>
-					<p class="font-semibold tracking-wide">Contact us</p>
-					<ul class="mt-2 space-y-2">
-						<li>
-							<a
-								href="mailto:gdsc.ue@gmail.com"
-								class="transition-colors duration-300 hover:underline"
-								>gdsc.ue@gmail.com</a>
-						</li>
-					</ul>
-				</div>				
+        <!-- About Us -->
+        <div>
+          <p class="font-semibold tracking-wide">About us</p>
+          <ul class="mt-2 space-y-2">
+            <li>
+              <a
+                href="about#about-mission"
+                class="transition-colors duration-300 hover:text-purple-950"
+                >Mission</a
+              >
+            </li>
+            <li>
+              <a
+                href="about#about-vision"
+                class="transition-colors duration-300 hover:text-purple-950"
+                >Vision</a
+              >
+            </li>
+            <li>
+              <a
+                href="about#about-igmakadima"
+                class="transition-colors duration-300 hover:text-purple-950"
+                >Igma Kadima</a
+              >
+            </li>
 
-			</div>
-			
-		</div>
-		<hr />
-		<div class="flex flex-col justify-between pt-5 pb-10 sm:flex-row">
-			<p class="text-sm">
-				Google Developer Student Clubs - University of the East Caloocan © All
-				rights reserved. {today.getFullYear()}
-			</p>
-			<div class="flex items-center mt-4 space-x-4 sm:mt-0">
-				<a
-					href="https://www.facebook.com/gdscuecaloocan"
-					target="_blank"
-					class="transition-colors duration-300 hover:text-purple-950"
-				>
-					<svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
-						<path
-							d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
-						></path>
-					</svg>
-				</a>
-				<a
-					href="https://www.linkedin.com/company/google-developer-student-clubs-ue-caloocan/"
-					target="_blank"
-					class="transition-colors duration-300 hover:text-purple-950"
-				>
-					<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 rounded-md">
-						<path
-							d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"
-						></path>
-					</svg>
-				</a>
-				<a
-					href="https://github.com/GDSC-UECAL "
-					target="_blank"
-					class="transition-colors duration-300 hover:text-purple-950"
-				>
-					<svg x="0px" y="0px" fill="currentColor" viewBox="0 0 64 64" class="h-8">
-						<path d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 40.238706 44.458716 47.16934 36.904297 49.306641 C 36.811496 49.1154 36.747844 48.905917 36.753906 48.667969 C 36.784906 47.458969 36.753906 44.637563 36.753906 43.601562 C 36.753906 41.823563 35.628906 40.5625 35.628906 40.5625 C 35.628906 40.5625 44.453125 40.662094 44.453125 31.246094 C 44.453125 27.613094 42.554688 25.720703 42.554688 25.720703 C 42.554688 25.720703 43.551984 21.842266 42.208984 20.197266 C 40.703984 20.034266 38.008422 21.634812 36.857422 22.382812 C 36.857422 22.382813 35.034 21.634766 32 21.634766 C 28.966 21.634766 27.142578 22.382812 27.142578 22.382812 C 25.991578 21.634813 23.296016 20.035266 21.791016 20.197266 C 20.449016 21.842266 21.445312 25.720703 21.445312 25.720703 C 21.445312 25.720703 19.546875 27.611141 19.546875 31.244141 C 19.546875 40.660141 28.371094 40.5625 28.371094 40.5625 C 28.371094 40.5625 27.366329 41.706312 27.265625 43.345703 C 26.675939 43.553637 25.872132 43.798828 25.105469 43.798828 C 23.255469 43.798828 21.849984 42.001922 21.333984 41.169922 C 20.825984 40.348922 19.7845 39.660156 18.8125 39.660156 C 18.1725 39.660156 17.859375 39.981656 17.859375 40.347656 C 17.859375 40.713656 18.757609 40.968484 19.349609 41.646484 C 20.597609 43.076484 20.574484 46.292969 25.021484 46.292969 C 25.547281 46.292969 26.492043 46.171872 27.246094 46.068359 C 27.241926 47.077908 27.230199 48.046135 27.246094 48.666016 C 27.251958 48.904708 27.187126 49.114952 27.09375 49.306641 C 19.540258 47.168741 14 40.238046 14 32 C 14 22.059 22.059 14 32 14 z"></path>
-					</svg>
-				</a>
-			</div>
-		</div>
-	</div>
+            <li>
+              <a
+                href="about#about-gdscchapters"
+                class="transition-colors duration-300 hover:text-purple-950"
+                >Other GDSC Chapters</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Meet the team  -->
+        <div>
+          <p class="font-semibold tracking-wide">Meet the team</p>
+          <ul class="mt-2 space-y-2">
+            <li>
+              <a
+                href="mailto:gdsc.ue@gmail.com"
+                class="transition-colors duration-300 hover:underline"
+                >gdsc.ue@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Us  -->
+        <div>
+          <p class="font-semibold tracking-wide">Contact us</p>
+          <ul class="mt-2 space-y-2">
+            <li>
+              <a
+                href="mailto:gdsc.ue@gmail.com"
+                class="transition-colors duration-300 hover:underline"
+                >gdsc.ue@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <p class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        Google Developer Student Clubs - University of the East Caloocan © All
+        rights reserved. {today.getFullYear()}
+      </p>
+
+      <div class="flex mt-4 sm:justify-center items-center sm:mt-0 gap-4">
+        <a
+          href="https://facebook.com/gdscuecaloocan/"
+          class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+          <svg
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            ><path
+              d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+            ></path></svg
+          >
+        </a>
+
+        <a
+          href="https://github.com/GDSC-UECAL"
+          class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+          <svg
+            class="h-8 w-auto"
+            fill="currentColor"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+            ><path
+              d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 40.238706 44.458716 47.16934 36.904297 49.306641 C 36.811496 49.1154 36.747844 48.905917 36.753906 48.667969 C 36.784906 47.458969 36.753906 44.637563 36.753906 43.601562 C 36.753906 41.823563 35.628906 40.5625 35.628906 40.5625 C 35.628906 40.5625 44.453125 40.662094 44.453125 31.246094 C 44.453125 27.613094 42.554688 25.720703 42.554688 25.720703 C 42.554688 25.720703 43.551984 21.842266 42.208984 20.197266 C 40.703984 20.034266 38.008422 21.634812 36.857422 22.382812 C 36.857422 22.382813 35.034 21.634766 32 21.634766 C 28.966 21.634766 27.142578 22.382812 27.142578 22.382812 C 25.991578 21.634813 23.296016 20.035266 21.791016 20.197266 C 20.449016 21.842266 21.445312 25.720703 21.445312 25.720703 C 21.445312 25.720703 19.546875 27.611141 19.546875 31.244141 C 19.546875 40.660141 28.371094 40.5625 28.371094 40.5625 C 28.371094 40.5625 27.366329 41.706312 27.265625 43.345703 C 26.675939 43.553637 25.872132 43.798828 25.105469 43.798828 C 23.255469 43.798828 21.849984 42.001922 21.333984 41.169922 C 20.825984 40.348922 19.7845 39.660156 18.8125 39.660156 C 18.1725 39.660156 17.859375 39.981656 17.859375 40.347656 C 17.859375 40.713656 18.757609 40.968484 19.349609 41.646484 C 20.597609 43.076484 20.574484 46.292969 25.021484 46.292969 C 25.547281 46.292969 26.492043 46.171872 27.246094 46.068359 C 27.241926 47.077908 27.230199 48.046135 27.246094 48.666016 C 27.251958 48.904708 27.187126 49.114952 27.09375 49.306641 C 19.540258 47.168741 14 40.238046 14 32 C 14 22.059 22.059 14 32 14 z"
+            ></path></svg
+          >
+        </a>
+
+        <a
+          href="https://www.linkedin.com/company/gdsc-ue/"
+          class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 rounded-sm">
+            <path
+              d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
