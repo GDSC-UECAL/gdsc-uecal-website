@@ -11,7 +11,7 @@ Google Developer Student Clubs University of the East Caloocan is a community gr
 | Name | Position | Role |
 | :--- | :----   | :--- |
 | Kurt Calacday | **Web Development Lead** | Project Head, Lead Developer |
-| Kurt Cadenas | **Chief Technology Officer** | Project Head |
+| Kurt Cadenas | **Chief Technology Officer** | Project Head, Lead Developer |
 | Deihl Reyes | *Associate Web Development Lead* | Front-End Developement |
 | Red Pangilinan | *Associate Web Development Lead* | Front-End Developement |
 | Mochi Aseoche | UI / UX Development Lead | UI / UX Development & Wireframing |
