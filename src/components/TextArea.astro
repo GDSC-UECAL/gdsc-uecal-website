@@ -1,15 +1,15 @@
 ---
 export type Props = astroHTML.JSX.TextareaHTMLAttributes & {
-	label: string;
+  label: string;
 };
 
 const { label, placeholder, ...props } = Astro.props as Props;
 ---
 
 <div class="flex flex-col relative group">
-	<label for={props.name} class="block mb-2">{label}</label>
-	<textarea
-		{...props}
-		class="shadow appearance-none border rounded w-full p-3 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-		placeholder="Message"></textarea>
+  <label for={props.name} class="block mb-2">{label}</label>
+  <textarea
+    {...props}
+    class="shadow appearance-none bg-gray-50 text-gray-600 block border rounded w-full p-3 leading-tight focus:outline-none dark:text-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+    placeholder="Message"></textarea>
 </div>
