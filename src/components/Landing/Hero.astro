@@ -7,76 +7,74 @@ import YellowBall from "../../assets/yellow-ball.svg";
 ---
 
 <section
-	class="flex items-center p-5 justify-center bg-[url(../../../public/background.webp)] bg-cover bg-center h-screen relative overflow-hidden" id="home-welcome"
->
-	<Image
-		src={GreenOblong}
-		alt="Green Oblong Figure"
-		class="absolute top-0 left-[-15%] w-4/12 h-auto motion-safe:animate-[floating_4s_ease-in-out_infinite] delay-100"
-	/>
-	<Image
-		src={BluePyramid}
-		alt="Blue Pyramid Figure"
-		class="absolute bottom-[10%] right-[20%] w-2/12 h-auto motion-safe:animate-[floating_6s_ease-in-out_infinite] delay-300"
-	/>
-	<Image
-		src={RedBall}
-		alt="Red Ball Figure"
-		class="absolute top-8 right-8 w-2/12 h-auto motion-safe:animate-[floating_5s_ease-in-out_infinite] delay-200"
-	/>
+  class="flex items-center p-5 justify-center bg-[url(/background.webp)] bg-cover bg-center h-screen relative overflow-hidden"
+  id="home-welcome">
+  <Image
+    src={GreenOblong}
+    alt="Green Oblong Figure"
+    class="absolute top-0 left-[-15%] w-4/12 h-auto motion-safe:animate-[floating_4s_ease-in-out_infinite] delay-100"
+  />
+  <Image
+    src={BluePyramid}
+    alt="Blue Pyramid Figure"
+    class="absolute bottom-[10%] right-[20%] w-2/12 h-auto motion-safe:animate-[floating_6s_ease-in-out_infinite] delay-300"
+  />
+  <Image
+    src={RedBall}
+    alt="Red Ball Figure"
+    class="absolute top-8 right-8 w-2/12 h-auto motion-safe:animate-[floating_5s_ease-in-out_infinite] delay-200"
+  />
 
-	<Image
-		src={YellowBall}
-		alt="Yellow Ball Figure"
-		class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto motion-safe:animate-[floating_3s_ease-in-out_infinite]"
-	/>
-	<div
-		class=" max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-5 py-20 px-20 rounded-3xl shadow-md border-4 border-solid border-violet-500 border-opacity-10"
-	>
-		<h1
-			class="font-black text-6xl sm:text-9xl md:text-9xl lg:text-9xl tracking-tighter leading-none text-start md:text-start text-white"
-		>
-			Together, we discover
-			<br />
-			<span id="typewriter" class="text-gradient-purple inline-block"></span>
-		</h1>
-	</div>
+  <Image
+    src={YellowBall}
+    alt="Yellow Ball Figure"
+    class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto motion-safe:animate-[floating_3s_ease-in-out_infinite]"
+  />
+  <div
+    class="max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-5 py-20 px-20 rounded-3xl shadow-md border-4 border-solid border-violet-500 border-opacity-10">
+    <h1
+      class="font-black text-6xl sm:text-9xl md:text-9xl lg:text-9xl tracking-tighter leading-none text-start md:text-start text-white">
+      Together, we discover
+      <br />
+      <span id="typewriter" class="text-gradient-purple inline-block"></span>
+    </h1>
+  </div>
 </section>
 
 <script>
-	const words: string[] = ["future.", "dreams.", "careers.", "solutions."];
-	let i: number = 0;
-	let j: number = 0;
-	let currentWord: string = "";
-	let isDeleting: boolean = false;
+  const words: string[] = ["future.", "dreams.", "careers.", "solutions."];
+  let i: number = 0;
+  let j: number = 0;
+  let currentWord: string = "";
+  let isDeleting: boolean = false;
 
-	function type() {
-		currentWord = words[i];
-		if (isDeleting) {
-			const typewriterElement = document.getElementById("typewriter");
-			if (typewriterElement) {
-				typewriterElement.textContent = currentWord.substring(0, j - 1);
-			}
-			j--;
-			if (j === 0) {
-				isDeleting = false;
-				i++;
-				if (i === words.length) {
-					i = 0;
-				}
-			}
-		} else {
-			const typewriterElement = document.getElementById("typewriter");
-			if (typewriterElement) {
-				typewriterElement.textContent = currentWord.substring(0, j + 1);
-			}
-			j++;
-			if (j === currentWord.length) {
-				isDeleting = true;
-			}
-		}
-		setTimeout(type, 150);
-	}
+  function type() {
+    currentWord = words[i];
+    if (isDeleting) {
+      const typewriterElement = document.getElementById("typewriter");
+      if (typewriterElement) {
+        typewriterElement.textContent = currentWord.substring(0, j - 1);
+      }
+      j--;
+      if (j === 0) {
+        isDeleting = false;
+        i++;
+        if (i === words.length) {
+          i = 0;
+        }
+      }
+    } else {
+      const typewriterElement = document.getElementById("typewriter");
+      if (typewriterElement) {
+        typewriterElement.textContent = currentWord.substring(0, j + 1);
+      }
+      j++;
+      if (j === currentWord.length) {
+        isDeleting = true;
+      }
+    }
+    setTimeout(type, 150);
+  }
 
-	type();
+  type();
 </script>
