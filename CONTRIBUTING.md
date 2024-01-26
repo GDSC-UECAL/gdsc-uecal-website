@@ -14,7 +14,7 @@ You can fork this repo by clicking the fork button in the top right corner of th
 git clone https://github.com/GDSC-UECAL/gdsc-uecal-website.git
 ```
 
-3. Install dependencies using pnpm.
+3. Install dependencies using npm.
 
 ```bash
 npm install
