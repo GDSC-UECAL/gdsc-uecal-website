@@ -51,7 +51,8 @@ import YellowBall from "../../assets/yellow-ball.svg";
   function type() {
     currentWord = words[i];
     if (isDeleting) {
-      const typewriterElement = document.getElementById("typewriter");
+      const typewriterElement: HTMLElement | null =
+        document.getElementById("typewriter");
       if (typewriterElement) {
         typewriterElement.textContent = currentWord.substring(0, j - 1);
       }
@@ -64,7 +65,8 @@ import YellowBall from "../../assets/yellow-ball.svg";
         }
       }
     } else {
-      const typewriterElement = document.getElementById("typewriter");
+      const typewriterElement: HTMLElement | null =
+        document.getElementById("typewriter");
       if (typewriterElement) {
         typewriterElement.textContent = currentWord.substring(0, j + 1);
       }
