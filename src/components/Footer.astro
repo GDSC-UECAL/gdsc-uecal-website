@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import BaseHead from "../components/BaseHead.astro";
+
 import Logo from "../assets/gdsclogo.svg";
 const today = new Date();
 ---
@@ -15,6 +17,8 @@ const today = new Date();
   document.getElementById("currentYear")!.textContent = currentYear.toString();
   document.getElementById("nextYear")!.textContent = nextYear.toString();
 </script>
+
+<BaseHead title="" description="" />
 
 <footer class="bg-white dark:bg-gray-900 px-12 py-16">
   <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
