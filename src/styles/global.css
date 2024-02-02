@@ -34,10 +34,12 @@ body {
 }
 
 @keyframes blink {
+
 	0%,
 	100% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 1;
 	}
@@ -47,9 +49,11 @@ body {
 	0% {
 		transform: translate(0, 0px);
 	}
+
 	50% {
 		transform: translate(0, 15px);
 	}
+
 	100% {
 		transform: translate(0, -0px);
 	}
