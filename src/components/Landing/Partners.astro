@@ -1,18 +1,20 @@
 ---
 import { Image } from "astro:assets";
-import DataCamp from "../../assets/landing/logo_datacamp.png";
-import DataCampDark from "../../assets/landing/logo_datacamp-dark.png";
-import PocketDevs from "../../assets/landing/logo_pocketdevs.webp";
+import DataCamp from "../../assets/landing/partners/logo_datacamp.png";
+import DataCampDark from "../../assets/landing/partners/logo_datacamp-dark.png";
+import PocketDevs from "../../assets/landing//partners/logo_pocketdevs.webp";
+import Devcon from "../../assets/landing//partners/logo_devcon.png";
 
-import ACSS from "../../assets/landing/logo_acss.png";
-import COESS from "../../assets/landing/logo_coess.png";
-import ENSC from "../../assets/landing/logo_ensc.png";
-import LITS from "../../assets/landing/logo_lits.png";
-import MLSA from "../../assets/landing/logo_mlsa.png";
+import ACSS from "../../assets/landing//partners/logo_acss.png";
+import COESS from "../../assets/landing//partners/logo_coess.png";
+import ENSC from "../../assets/landing//partners/logo_ensc.png";
+import LITS from "../../assets/landing//partners/logo_lits.png";
+import ACES from "../../assets/landing//partners/logo_aces.png";
+import MLSA from "../../assets/landing//partners/logo_mlsa.png";
 
-import Amasing from "../../assets/landing/logo_amasing.jpg";
-import Bewitched from "../../assets/landing/logo_bewitched.jpg";
-import Klik from "../../assets/landing/logo_klik.jpg";
+import Amasing from "../../assets/landing//partners/logo_amasing.jpg";
+import Bewitched from "../../assets/landing//partners/logo_bewitched.jpg";
+import Klik from "../../assets/landing//partners/logo_klik.png";
 ---
 
 <section class="py-12 bg-white dark:bg-gray-900" id="home-partners">
@@ -52,6 +54,16 @@ import Klik from "../../assets/landing/logo_klik.jpg";
           class="w-auto h-12 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125 dark:backdrop-grayscale-none"
         />
       </a>
+
+      <a
+        href="https://devcon.ph/"
+        class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+        <Image
+          src={Devcon}
+          alt="Devcon Philippines"
+          class="w-auto h-12 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125 dark:backdrop-grayscale-none"
+        />
+      </a>
     </div>
 
     <!-- Recognized Student Organization(s) -->
@@ -86,8 +98,9 @@ import Klik from "../../assets/landing/logo_klik.jpg";
           class="w-auto h-28 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
         />
       </a>
+
       <a
-        href="https://web.facebook.com/UE.LITS"
+        href="https://facebook.com/UE.LITS"
         class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
         <Image
           src={LITS}
@@ -97,7 +110,17 @@ import Klik from "../../assets/landing/logo_klik.jpg";
       </a>
 
       <a
-        href="#"
+        href='https://www.facebook.com/ueaces.official"'
+        class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+        <Image
+          src={ACES}
+          alt="Association of Civil Engineering Students"
+          class="w-auto h-28 drop-shadow-lg rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+        />
+      </a>
+
+      <a
+        href="https://mvp.microsoft.com/en-US/studentambassadors/profile/28a01c67-e3fd-4801-b003-b0891e100a3a"
         class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
         <Image
           src={MLSA}
