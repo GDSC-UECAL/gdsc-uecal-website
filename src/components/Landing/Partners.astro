@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import DataCamp from "../../assets/landing/partners/logo_datacamp.png";
 import DataCampDark from "../../assets/landing/partners/logo_datacamp-dark.png";
 import PocketDevs from "../../assets/landing//partners/logo_pocketdevs.webp";
+import YFSPH from "../../assets/landing//partners/logo_yfsph.png";
 import Devcon from "../../assets/landing//partners/logo_devcon.png";
 
 import ACSS from "../../assets/landing//partners/logo_acss.png";
@@ -19,7 +20,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
 
 <section class="py-12 bg-white dark:bg-gray-900" id="home-partners">
   <div
-    class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+    class="px-4 mx-auto text-center md:max-w-screen-sm lg:max-w-screen-xl lg:px-36">
     <h2 class="text-3xl text-gray-600 mb-6 leading-none">Brought to you by</h2>
 
     <h1
@@ -39,9 +40,17 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         href="https://www.datacamp.com/"
         class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
         <Image
-          src={DataCampDark}
-          alt="Association of Computer Studies Students"
-          class="w-auto h-12 drop-shadow-lg transition-all duration-300 cursor-pointer filter hover:scale-125"
+          src={DataCamp}
+          alt="DataCamp"
+          class="w-auto h-12 drop-shadow-lg transition-all duration-300 cursor-pointer filter hover:scale-110"
+        />
+      </a>
+
+      <a
+        href="https://www.datacamp.com/"
+        class="hidden mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+        <image
+          class="w-auto h-12 drop-shadow-lg transition-all duration-300 cursor-pointer filter hover:scale-110 dark:bg-[url(../../assets/landing/partners/logo_datacamp-dark.png)]"
         />
       </a>
 
@@ -51,7 +60,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={PocketDevs}
           alt="Computer Engineering Students Society"
-          class="w-auto h-12 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125 dark:backdrop-grayscale-none"
+          class="w-auto h-12 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110 dark:backdrop-grayscale-none"
         />
       </a>
 
@@ -61,7 +70,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={Devcon}
           alt="Devcon Philippines"
-          class="w-auto h-12 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125 dark:backdrop-grayscale-none"
+          class="w-auto h-12 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110 dark:backdrop-grayscale-none"
         />
       </a>
     </div>
@@ -75,7 +84,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={ENSC}
           alt="Office of the UE-Caloocan Engineering Student Council "
-          class="w-auto h-28 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-28 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
 
@@ -85,7 +94,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={ACSS}
           alt="Association of Computer Studies Students"
-          class="w-auto h-28 drop-shadow-lg rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-28 drop-shadow-md rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
 
@@ -95,7 +104,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={COESS}
           alt="Computer Engineering Students Society"
-          class="w-auto h-28 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-28 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
 
@@ -105,7 +114,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={LITS}
           alt="League of Information Technology Students"
-          class="w-auto h-28 drop-shadow-lg rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-28 drop-shadow-lg rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
 
@@ -115,7 +124,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={ACES}
           alt="Association of Civil Engineering Students"
-          class="w-auto h-28 drop-shadow-lg rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-28 drop-shadow-lg rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
 
@@ -125,7 +134,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={MLSA}
           alt="League of Information Technology Students"
-          class="w-auto h-32 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-32 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
     </div>
@@ -139,7 +148,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={Amasing}
           alt="Amasing Beauty Salon & Spa"
-          class="w-auto h-32 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-32 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
 
@@ -149,7 +158,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={Klik}
           alt="KLIK Media Group"
-          class="w-auto h-32 shadow-xl rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-32 shadow-xl rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
       <a
@@ -158,7 +167,7 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
         <Image
           src={Bewitched}
           alt="Bewitched Stitches"
-          class="w-auto h-32 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-125"
+          class="w-auto h-32 rounded-md transition-all duration-300 cursor-pointer filter hover:scale-110"
         />
       </a>
     </div>
