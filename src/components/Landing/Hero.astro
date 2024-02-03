@@ -41,42 +41,42 @@ import YellowBall from "../../assets/yellow-ball.svg";
   </div>
 </section>
 
+<!-- Typewritting Script -->
 <script>
-  const words: string[] = ["future.", "dreams.", "careers.", "solutions."];
-  let i: number = 0;
-  let j: number = 0;
-  let currentWord: string = "";
-  let isDeleting: boolean = false;
+  window.addEventListener("DOMContentLoaded", (event) => {
+    const words = ["future.", "dreams.", "careers.", "solutions."];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
 
-  function type() {
-    currentWord = words[i];
-    if (isDeleting) {
-      const typewriterElement: HTMLElement | null =
-        document.getElementById("typewriter");
-      if (typewriterElement) {
-        typewriterElement.textContent = currentWord.substring(0, j - 1);
-      }
-      j--;
-      if (j === 0) {
-        isDeleting = false;
-        i++;
-        if (i === words.length) {
-          i = 0;
+    function type() {
+      currentWord = words[i];
+      const typewriterElement = document.getElementById("typewriter");
+      if (isDeleting) {
+        if (typewriterElement) {
+          typewriterElement.textContent = currentWord.substring(0, j - 1);
+        }
+        j--;
+        if (j === 0) {
+          isDeleting = false;
+          i++;
+          if (i === words.length) {
+            i = 0;
+          }
+        }
+      } else {
+        if (typewriterElement) {
+          typewriterElement.textContent = currentWord.substring(0, j + 1);
+        }
+        j++;
+        if (j === currentWord.length) {
+          isDeleting = true;
         }
       }
-    } else {
-      const typewriterElement: HTMLElement | null =
-        document.getElementById("typewriter");
-      if (typewriterElement) {
-        typewriterElement.textContent = currentWord.substring(0, j + 1);
-      }
-      j++;
-      if (j === currentWord.length) {
-        isDeleting = true;
-      }
+      setTimeout(type, 150);
     }
-    setTimeout(type, 150);
-  }
 
-  type();
+    type();
+  });
 </script>
