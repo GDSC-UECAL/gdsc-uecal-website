@@ -4,39 +4,36 @@ import Logo from "../../assets/gdsclogo.svg";
 import Divider from "../../assets/divider.svg";
 ---
 
-<section class="py-24">
-	<div class="flex flex-col justify-center items-center">
-        <div class="flex flex-col justify-center items-center p-8">
+<section class="py-24 bg-white dark:bg-gray-900">
+  <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center p-8">
+      <Image
+        src={Logo}
+        alt="GDSC Logo"
+        class="w-32 lg:16 h-auto mx-auto lg:mx-0"
+      />
 
-            <Image
-                src={Logo}
-                alt="GDSC Logo"
-                class="w-32 lg:16 h-auto mx-auto lg:mx-0"
-            />
+      <h1
+        class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6 dark:text-white">
+        What is GDSC UE - Caloocan?
+      </h1>
 
-            <h1
-				class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6"
-			>
-				What is GDSC UE - Caloocan?
-			</h1>
-            <div class="lg:max-w-[1140px] p-8 rounded-md shadow-lg shadow-black/50">
-                <p class="text-md lg:text-2xl md:text-3xl sm:text-xl text-justify leading-relaxed">
-                    Google Developer Student Clubs UE Caloocan is a student-led technology 
-                    organization situated at the University of The East in Caloocan City. 
-                    As a proud member of a global community, our mission is to empower diverse 
-                    communities worldwide through the transformative power of technology.
-                </p>
-            </div>
-        </div>
-	</div>
+      <div
+        class="lg:max-w-[1140px] p-8 rounded-md bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <p
+          class="text-md lg:text-2xl md:text-3xl sm:text-xl text-justify leading-relaxed dark:text-gray-400">
+          Google Developer Student Clubs UE Caloocan is a student-led technology
+          organization situated at the University of The East in Caloocan City.
+          As a proud member of a global community, our mission is to empower
+          diverse communities worldwide through the transformative power of
+          technology.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="lg:container-fluid lg:mx-auto md:container-fluid sm:container-fluid">
-
-    <Image
-        src={Divider}
-        alt="Divider"
-        class="xl:w-screen"
-    />    
-    
+<div
+  class="lg:container-fluid lg:mx-auto md:container-fluid sm:container-fluid">
+  <Image src={Divider} alt="Divider" class="xl:w-screen" />
 </div>
