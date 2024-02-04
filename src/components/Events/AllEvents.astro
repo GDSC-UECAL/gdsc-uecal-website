@@ -22,10 +22,12 @@ const endIndex = startIndex + itemsPerPage;
 const paginatedEvents = allEvents.slice(startIndex, endIndex);
 ---
 
-<section class="pb-24">
+<section class="pb-24 bg-white dark:bg-gray-900">
   <div
     class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center gap-16">
-    <h1 class="text-3xl md:text-5xl text-center font-bold">All Events</h1>
+    <h1 class="text-3xl md:text-5xl text-center font-bold dark:text-white">
+      All Events
+    </h1>
     <Pagination currentPage={currentPage} maxPages={maxPages} />
     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-20">
       {
