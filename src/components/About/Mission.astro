@@ -8,120 +8,108 @@ import Connect from "../../assets/about/connect.png";
 ---
 
 <div class="lg:container-fluid lg:mx-auto">
-
-    <Image
-        src={Divider}
-        alt="Divider"
-        class="xl:w-screen"
-    />    
-    
+  <Image src={Divider} alt="Divider" class="xl:w-screen" />
 </div>
 
-<section class="pt-24 px-8 md:px-24">
+<section class="pt-24 px-8 md:px-24 dark:bg-gray-900" id="about-vision">
+  <div
+    class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-16">
+    <Image
+      src={Vision}
+      alt="Vision Picture"
+      class="w-auto h-auto sm:w-auto md:w-auto lg:w-auto mx-auto"
+    />
+
+    <div class="w-full md:w-auto">
+      <h1
+        class="mb-6 text-3xl md:text-5xl tracking-tight font-extrabold text-[#E3422E]">
+        Vision
+      </h1>
+
+      <p
+        class="text-lg md:text-2xl sm:text-2xl leading-relaxed mb-4 dark:text-gray-400">
+        The organization envisions itself as a catalyst for creating an
+        inclusive and supportive environment that encourages personal and
+        professional growth. Through the power of technology and innovative
+        solutions, we aim to uplift communities, making a positive impact and
+        addressing their needs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section
+  class="bg-white py-12 px-8 md:px-24 dark:bg-gray-900"
+  id="about-mission">
+  <div class="mx-auto py-16 sm:py-24 px-8 md:px-24 max-w-7xl">
+    <h1 class="text-3xl text-start md:text-5xl font-bold mb-6 text-violet-600">
+      Mission
+    </h1>
+
+    <p class="text-xl text-start md:text-3xl mb-6 dark:text-gray-400">
+      The organization aims to do the ABC:
+    </p>
+
     <div
-        class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-16" id="about-vision"
-    >    
-        <Image
-            src={Vision}
-            alt="Vision Picture"
-            class="w-auto h-auto sm:w-auto md:w-auto lg:w-auto mx-auto"
-        />
+      class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 xl:gap-x-8 content-center items-center">
+      <!-- Event 1 -->
+      <div class="group relative">
+        <div
+          class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg lg:aspect-none lg:h-auto">
+          <div class="p-5 py-14 items-center content-center text-start">
+            <Image src={Aspire} alt="Divider" class="w-6 py-6 h-auto" />
 
-        <div class="w-full md:w-auto">
-            <h1 class="mb-6 text-3xl md:text-5xl tracking-tight font-extrabold text-[#E3422E]">Vision</h1>
-            
-            <p class="text-lg md:text-2xl sm:text-2xl leading-relaxed mb-4">
-				The organization envisions itself as a catalyst for creating an inclusive and 
-                supportive environment that encourages personal and professional growth. 
-                Through the power of technology and innovative solutions, we aim to uplift 
-                communities, making a positive impact and addressing their needs.
-			</p>            
-            
+            <h1 class="text-3xl md:text-3xl mt-6 font-bold mb-6 text-[#F6BC15]">
+              Aspire
+            </h1>
+
+            <p
+              class="text-lg sm:text-xl leading-relaxed mb-4 dark:text-gray-400">
+              Individuals to grow with the help of peer-to-peer learning through
+              the community.
+            </p>
+          </div>
         </div>
-    </div>
-    
-  </section>
+      </div>
 
-  <section class="bg-white py-12 px-8 md:px-24" id="about-mission">
-    <div class="mx-auto py-16 sm:py-24 px-8 md:px-24 max-w-7xl">
-        <h1 class="text-3xl text-start md:text-5xl font-bold mb-6 text-violet-600">Mission</h1>
+      <!-- Event 2 -->
+      <div class="group relative">
+        <div
+          class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg lg:aspect-none lg:h-auto">
+          <div class="p-5 py-14 items-center content-center text-start">
+            <Image src={Build} alt="Divider" class="w-8 h-auto py-6" />
 
-        <p class="text-xl text-start md:text-3xl mb-6">
-            The organization aims to do the ABC:
-        </p>
+            <h1 class="text-3xl md:text-3xl mt-6 font-bold mb-6 text-[#47A94C]">
+              Build
+            </h1>
 
-        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 xl:gap-x-8 content-center items-center">
-            <!-- Event 1 -->
-            <div class="group relative">
-                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg lg:aspect-none lg:h-auto">
-
-                    <div class="p-5 py-14 items-center content-center text-start">
-                            <Image
-                                src={Aspire}
-                                alt="Divider"
-                                class="w-6 py-6 h-auto"
-                            />
-
-                        <h1 class="text-3xl md:text-3xl mt-6 font-bold mb-6 text-[#F6BC15]">                                                                
-                            Aspire
-                        </h1>
-
-                        <p class="text-lg sm:text-xl leading-relaxed mb-4">
-                            Individuals to grow with the help of peer-to-peer learning through the community.
-                        </p>                             
-                 
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Event 2 -->
-            <div class="group relative">
-                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg lg:aspect-none lg:h-auto">
-
-                    <div class="p-5 py-14 items-center content-center text-start">
-
-                        <Image
-                            src={Build}
-                            alt="Divider"
-                            class="w-8 h-auto py-6"
-                        />               
-
-                        <h1 class="text-3xl md:text-3xl mt-6 font-bold mb-6 text-[#47A94C]">Build</h1>
-
-                        <p class="text-lg sm:text-xl leading-relaxed mb-4">
-                            Experience & meaningful technologies to empower communities.
-                        </p>                             
-  
-                    </div>                        
-
-                </div>
-            </div>
-
-            <!-- Event 3 -->
-            <div class="group relative ">
-                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg lg:aspect-none lg:h-auto">
-
-                    <div class="p-5 py-14 items-center content-center text-start">
-
-                        <Image
-                            src={Connect}
-                            alt="Divider"
-                            class="w-10 h-auto py-6"
-                        />                                      
-
-                        <h1 class="text-3xl md:text-3xl mt-6 font-bold mb-6 text-[#438ECC]">Connect</h1>
-
-                        <p class="text-lg sm:text-xl leading-relaxed mb-4">
-                            With people through the community and organizations to grow your network.
-                        </p>                             
-
-       
-                    </div>
-
-                </div>
-            </div>
-
+            <p
+              class="text-lg sm:text-xl leading-relaxed mb-4 dark:text-gray-400">
+              Experience & meaningful technologies to empower communities.
+            </p>
+          </div>
         </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="group relative">
+        <div
+          class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg lg:aspect-none lg:h-auto">
+          <div class="p-5 py-14 items-center content-center text-start">
+            <Image src={Connect} alt="Divider" class="w-10 h-auto py-6" />
+
+            <h1 class="text-3xl md:text-3xl mt-6 font-bold mb-6 text-[#438ECC]">
+              Connect
+            </h1>
+
+            <p
+              class="text-lg sm:text-xl leading-relaxed mb-4 dark:text-gray-400">
+              With people through the community and organizations to grow your
+              network.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
