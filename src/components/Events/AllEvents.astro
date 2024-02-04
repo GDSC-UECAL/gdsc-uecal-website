@@ -22,7 +22,7 @@ const endIndex = startIndex + itemsPerPage;
 const paginatedEvents = allEvents.slice(startIndex, endIndex);
 ---
 
-<section class="pb-24 bg-white dark:bg-gray-900">
+<section class="pb-24 bg-white dark:bg-gray-900" id="all-events">
   <div
     class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center gap-16">
     <h1 class="text-3xl md:text-5xl text-center font-bold dark:text-white">
@@ -38,12 +38,12 @@ const paginatedEvents = allEvents.slice(startIndex, endIndex);
               <Image
                 src={post.data.heroImage}
                 alt="Blue Pyramid Figure"
-                class="h-96 w-full rounded-3xl border-2 object-contain shadow-md object-center"
+                class="h-96 sm:h-56 w-full rounded-xl shadow-md object-center"
               />
 
               <div class="pt-4 flex justify-between">
                 <div>
-                  <h3 class="text-md font-semibold text-gray-900">
+                  <h3 class="text-md font-semibold text-gray-900 dark:text-white">
                     {post.data.title}
                   </h3>
                   <p class="mt-1 text-md text-gray-500">
