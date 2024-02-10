@@ -43,6 +43,7 @@ the following categories:
 - `docs`: changing existing or creating new documentation (i.e. README)
 - `build`: all changes regarding the build of the software, changes to
   dependencies or the addition of new dependencies
+- `event`: adding a new markdown documentation event within the website.
 - `test`: all changes regarding tests (adding new tests or changing existing
   ones)
 - `ci`: all changes regarding the configuration of continuous integration (i.e.
