@@ -4,11 +4,11 @@ import type { CollectionEntry } from "astro:content";
 import EventPost from "../../layouts/EventPost.astro";
 
 export async function getStaticPaths() {
-	const posts = await getCollection("events");
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+  const posts = await getCollection("events");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
 }
 type Props = CollectionEntry<"events">;
 
@@ -17,5 +17,5 @@ const { Content } = await post.render();
 ---
 
 <EventPost {...post.data}>
-	<Content />
+  <Content />
 </EventPost>

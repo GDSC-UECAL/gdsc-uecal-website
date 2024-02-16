@@ -1,9 +1,11 @@
 const plugin = require("tailwindcss/plugin");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: 'class', // or 'media' or 'class'
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
+			display: ['dark'],
 			keyframes: {
 				typing: {
 					"0%": {
@@ -25,11 +27,17 @@ module.exports = {
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+				"dark": "url('../src/assets/landing/partners/logo_datacamp-dark.png')",
 
 			},
 			animation: {
 				typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
 			},
+		},
+	},
+	variants: {
+		extend: {
+			backgroundImage: ["dark"],
 		},
 	},
 	plugins: [
