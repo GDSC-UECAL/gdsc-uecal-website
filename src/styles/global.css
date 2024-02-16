@@ -58,3 +58,7 @@ body {
 		transform: translate(0, -0px);
 	}
 }
+
+.display-none {
+	@apply hidden;
+}
