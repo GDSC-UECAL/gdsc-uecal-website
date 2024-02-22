@@ -13,14 +13,24 @@ const iconToggle = () => {
 };
 
 // Initial Theme Check
-const themeCheck = () => {
-    if (userTheme === "dark" || (!userTheme && systemTheme)) {
-        document.documentElement.classList.add("dark");
-        moonIcon.classList.add("display-none");
-        return;
-    }
-    sunIcon.classList.add("display-none");
-};
+document.addEventListener("DOMContentLoaded", () => {
+    const userTheme = localStorage.getItem("theme");
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const moonIcon = document.getElementById("moonIcon");
+    const sunIcon = document.getElementById("sunIcon");
+
+    const themeCheck = () => {
+        if (userTheme === "dark" || (!userTheme && systemTheme)) {
+            document.documentElement.classList.add("dark");
+            if (moonIcon) moonIcon.classList.add("display-none");
+            return;
+        }
+        if (sunIcon) sunIcon.classList.add("display-none");
+    };
+
+    themeCheck();
+});
+
 
 // Manual Theme Check
 const themeSwitch = () => {
@@ -36,13 +46,19 @@ const themeSwitch = () => {
 };
 
 // Call Theme Switch on clicking buttons
-sunIcon.addEventListener("click", () => {
-    themeSwitch();
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
 
-moonIcon.addEventListener("click", () => {
-    themeSwitch();
-});
+    if (sunIcon) {
+        sunIcon.addEventListener("click", () => {
+            themeSwitch();
+        });
+    }
 
-// Invoke Theme Check on Initial Load
-themeCheck();
+    if (moonIcon) {
+        moonIcon.addEventListener("click", () => {
+            themeSwitch();
+        });
+    }
+});
