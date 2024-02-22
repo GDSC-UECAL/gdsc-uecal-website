@@ -10,7 +10,7 @@ const recentPosts = posts.slice(0, 4);
 ---
 
 <div
-  class="bg-[url(/events.jpg)] bg-cover bg-center bg-no-repeat bg-local"
+  class="bg-[url(/events.jpg)] bg-cover bg-center bg-no-repeat bg-local dark:invert-0"
   id="home-events">
   <div
     class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -28,6 +28,7 @@ const recentPosts = posts.slice(0, 4);
               <Image
                 src={post.data.heroImage}
                 alt="Blue Pyramid Figure"
+                loading="eager"
                 class="h-full w-full object-cover object-center lg:h-full lg:w-full"
               />
             </div>
