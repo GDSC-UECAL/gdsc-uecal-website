@@ -11,7 +11,7 @@ export default defineConfig({
 
 	integrations: [
 		{ type: 'mdx' },
-		{ type: 'sitemap', options: { filter: (page) => ... } },
+		{ type: 'sitemap' },
 		{ type: 'tailwind' },
 		{ type: 'astroImageTools' }
 	],
