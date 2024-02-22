@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
-import { astroImageTools } from "astro-imagetools";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import { astroImageTools } from "astro-imagetools";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -9,7 +9,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
 	site: "https://gdsc-uec.vercel.app/",
 
-	integrations: [mdx(
+	integrations: [astroImageTools, mdx(
 
 	), sitemap({
 		filter: (page) =>
@@ -18,9 +18,7 @@ export default defineConfig({
 			page !== 'https://gdsc-uec.vercel.app/events'
 	}), tailwind(
 
-	),
-
-		astroImageTools
+		),
 
 	],
 
