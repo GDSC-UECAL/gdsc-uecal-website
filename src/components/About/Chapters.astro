@@ -4,29 +4,31 @@ import Button from "../Button.astro";
 import othergdsc from "../../assets/about/othergdsc.jpg";
 ---
 
-<section class="py-24 px-8 md:px-24 bg-gradient-to-r from-indigo-200 via-violet-100 to-purple-200" id="about-gdscchapters">
+<section
+  class="py-24 px-8 md:px-24 bg-gradient-to-r from-indigo-200 via-violet-100 to-purple-200"
+  id="about-gdscchapters">
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-3xl text-center md:text-5xl font-bold mb-16 text-gray-900">
+      Meet other GDSC Chapters!
+    </h1>
+    <div
+      class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+      <Image
+        src={othergdsc}
+        alt="Chapters"
+        class="w-auto lg:16 h-auto mx-auto lg:mx-0 rounded-xl"
+      />
 
-	<div class="flex flex-col justify-center items-center">
-        <h1 class="text-3xl text-center md:text-5xl font-bold mb-16 text-gray-900">Meet other GDSC Chapters!</h1>
-		<div
-    		class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8"
-		>    
-
-			<Image
-				src={othergdsc}
-				alt="Vision Picture"
-				class="w-auto lg:16 h-auto mx-auto lg:mx-0 rounded-xl"
-        	/>
-
-			<div class="flex flex-col">
-				<p class="text-md md:text-3xl sm:text-2xl lg:text-xl leading-relaxed mb-8 text-gray-800">
-					GDSC-UECal is only one of 43 Google Developer Student Clubs (GDSCs) 
-					in the Philippines, all of which are university-based community groups 
-					that aim to bridge the gap between theory and practical application for 
-					Filipino student developers
-				</p>
-				<Button>See GDSC Philippines</Button>
-			</div>
-		</div>
-	</div>
+      <div class="flex flex-col">
+        <p
+          class="text-md md:text-3xl sm:text-2xl lg:text-xl leading-relaxed mb-8 text-gray-800">
+          GDSC-UECal is only one of 43 Google Developer Student Clubs (GDSCs) in
+          the Philippines, all of which are university-based community groups
+          that aim to bridge the gap between theory and practical application
+          for Filipino student developers
+        </p>
+        <Button>See GDSC Philippines</Button>
+      </div>
+    </div>
+  </div>
 </section>
