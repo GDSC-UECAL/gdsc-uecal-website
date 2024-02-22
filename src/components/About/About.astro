@@ -1,20 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "../../assets/gdsclogo.svg";
+import AboutPic from "../../assets/about/about.png";
 import Divider from "../../assets/divider.svg";
 ---
 
-<section class="py-24 bg-white dark:bg-gray-900">
+<section class="py-24 bg-white dark:bg-gray-900 h-screen">
   <div class="flex flex-col justify-center items-center">
     <div class="flex flex-col justify-center items-center p-8">
       <Image
-        src={Logo}
+        src={AboutPic}
         alt="GDSC Logo"
-        class="w-32 lg:16 h-auto mx-auto lg:mx-0"
+        loading="eager"
+        class="w-96 lg:16 h-auto mx-auto lg:mx-0"
       />
 
       <h1
-        class="text-center lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6 dark:text-white">
+        class="text-center lg:text-start font-bold text-3xl py-6 sm:text-4xl leading-none mb-6 dark:text-white">
         What is GDSC UE - Caloocan?
       </h1>
 
@@ -35,5 +36,5 @@ import Divider from "../../assets/divider.svg";
 
 <div
   class="lg:container-fluid lg:mx-auto md:container-fluid sm:container-fluid">
-  <Image src={Divider} alt="Divider" class="xl:w-screen" />
+  <Image src={Divider} alt="Divider" class="xl:w-screen" loading="eager" />
 </div>
