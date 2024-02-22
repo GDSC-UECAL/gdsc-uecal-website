@@ -6,17 +6,25 @@ const previousPage = currentPage - 1 >= 1 ? currentPage - 1 : 1;
 ---
 
 <div class="flex justify-center gap-4 md:gap-8">
-  <a
-    class={`rounded-xl p-4 cursor-pointer bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-[4rem] select-none text-center text-2xl dark:text-white ${
-      currentPage === 1 ? "opacity-50 pointer-events-none" : ""
-    }`}
-    href={currentPage === 1 ? "#" : `/events/${previousPage}`}>&lt;</a
-  >
+  {
+    currentPage !== 1 && (
+      <a
+        class={`rounded-xl p-4 cursor-pointer bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-[4rem] select-none text-center text-2xl dark:text-white`}
+        href={`/events/${previousPage}`}
+        aria-label="Previous Page">
+        &lt;
+      </a>
+    )
+  }
   <p class="py-4 text-2xl dark:text-white">{currentPage}</p>
-  <a
-    class={`rounded-xl p-4 cursor-pointer bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-[4rem] select-none text-center text-2xl dark:text-white ${
-      currentPage === maxPages ? "opacity-50 pointer-events-none" : ""
-    }`}
-    href={currentPage === maxPages ? "#" : `/events/${nextPage}`}>&gt;</a
-  >
+  {
+    currentPage !== maxPages && (
+      <a
+        class={`rounded-xl p-4 cursor-pointer bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-[4rem] select-none text-center text-2xl dark:text-white`}
+        href={`/events/${nextPage}`}
+        aria-label="Next Page">
+        &gt;
+      </a>
+    )
+  }
 </div>
