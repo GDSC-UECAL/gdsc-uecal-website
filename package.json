@@ -16,7 +16,6 @@
 		"@astrojs/sitemap": "^3.1.0",
 		"@astrojs/tailwind": "^5.1.0",
 		"astro": "^4.4.1",
-		"astro-imagetools": "^0.2.7",
 		"tailwindcss": "^3.4.1",
 		"typescript": "^5.3.3"
 	},
