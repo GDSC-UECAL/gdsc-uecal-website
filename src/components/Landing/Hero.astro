@@ -35,7 +35,7 @@ import YellowBall from "../../assets/yellow-ball.svg";
     class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto animate-[floating_3s_ease-in-out_infinite]"
   />
   <div
-    class="max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-5 py-20 px-20 rounded-3xl shadow-md border-4 border-solid border-violet-500 border-opacity-10">
+    class="isolate max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 py-16 px-16 rounded-3xl shadow-md ring-2 ring-black/5">
     <h1
       class="font-black text-7xl sm:text-9xl md:text-8xl tracking-tighter leading-none text-start md:text-start text-white">
       Together, we discover
@@ -47,40 +47,39 @@ import YellowBall from "../../assets/yellow-ball.svg";
 
 <!-- Typewriting Script -->
 <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const words = ["future", "dreams", "careers", "solutions"];
-    let i = 0;
-    let j = 0;
-    let currentWord = "";
-    let isDeleting = false;
+  const words: string[] = ["future.", "dreams.", "careers.", "solutions."];
+  let i: number = 0;
+  let j: number = 0;
+  let currentWord: string = "";
+  let isDeleting: boolean = false;
 
-    function type() {
-      currentWord = words[i];
+  function type() {
+    currentWord = words[i];
+    if (isDeleting) {
       const typewriterElement = document.getElementById("typewriter");
-      if (isDeleting) {
-        if (typewriterElement) {
-          typewriterElement.innerText = currentWord.substring(0, j - 1);
-        }
-        j--;
-        if (j === 0) {
-          isDeleting = false;
-          i++;
-          if (i === words.length) {
-            i = 0;
-          }
-        }
-      } else {
-        if (typewriterElement) {
-          typewriterElement.innerText = currentWord.substring(0, j + 1);
-        }
-        j++;
-        if (j === currentWord.length) {
-          isDeleting = true;
+      if (typewriterElement) {
+        typewriterElement.textContent = currentWord.substring(0, j - 1);
+      }
+      j--;
+      if (j === 0) {
+        isDeleting = false;
+        i++;
+        if (i === words.length) {
+          i = 0;
         }
       }
-      setTimeout(type, 150);
+    } else {
+      const typewriterElement = document.getElementById("typewriter");
+      if (typewriterElement) {
+        typewriterElement.textContent = currentWord.substring(0, j + 1);
+      }
+      j++;
+      if (j === currentWord.length) {
+        isDeleting = true;
+      }
     }
+    setTimeout(type, 125);
+  }
 
-    type();
-  });
+  type();
 </script>
