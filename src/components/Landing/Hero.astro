@@ -13,26 +13,26 @@ import YellowBall from "../../assets/yellow-ball.svg";
     src={GreenOblong}
     alt="Green Oblong Figure"
     loading="eager"
-    class="absolute top-0 left-[-15%] w-4/12 h-auto motion-safe:animate-[floating_4s_ease-in-out_infinite] delay-100"
+    class="absolute top-0 left-[-15%] w-4/12 h-auto animate-[floating_4s_ease-in-out_infinite] delay-100"
   />
   <Image
     src={BluePyramid}
     alt="Blue Pyramid Figure"
     loading="eager"
-    class="absolute bottom-[10%] right-[20%] w-2/12 h-auto motion-safe:animate-[floating_6s_ease-in-out_infinite] delay-300"
+    class="absolute bottom-[10%] right-[20%] w-2/12 h-auto animate-[floating_6s_ease-in-out_infinite] delay-300"
   />
   <Image
     src={RedBall}
     alt="Red Ball Figure"
     loading="eager"
-    class="absolute top-8 right-8 w-2/12 h-auto motion-safe:animate-[floating_5s_ease-in-out_infinite] delay-200"
+    class="absolute top-8 right-8 w-2/12 h-auto animate-[floating_5s_ease-in-out_infinite] delay-200"
   />
 
   <Image
     src={YellowBall}
     alt="Yellow Ball Figure"
     loading="eager"
-    class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto motion-safe:animate-[floating_3s_ease-in-out_infinite]"
+    class="absolute bottom-[-40%] left-[-13%] w-2/5 h-auto animate-[floating_3s_ease-in-out_infinite]"
   />
   <div
     class="max-w-2xl mx-auto bg-transparent backdrop-filter backdrop-blur-lg bg-opacity-5 py-20 px-20 rounded-3xl shadow-md border-4 border-solid border-violet-500 border-opacity-10">
@@ -48,7 +48,7 @@ import YellowBall from "../../assets/yellow-ball.svg";
 <!-- Typewriting Script -->
 <script>
   window.addEventListener("DOMContentLoaded", () => {
-    const words = ["future.", "dreams.", "careers.", "solutions."];
+    const words = ["future", "dreams", "careers", "solutions"];
     let i = 0;
     let j = 0;
     let currentWord = "";
@@ -59,7 +59,7 @@ import YellowBall from "../../assets/yellow-ball.svg";
       const typewriterElement = document.getElementById("typewriter");
       if (isDeleting) {
         if (typewriterElement) {
-          typewriterElement.textContent = currentWord.substring(0, j - 1);
+          typewriterElement.innerText = currentWord.substring(0, j - 1);
         }
         j--;
         if (j === 0) {
@@ -71,7 +71,7 @@ import YellowBall from "../../assets/yellow-ball.svg";
         }
       } else {
         if (typewriterElement) {
-          typewriterElement.textContent = currentWord.substring(0, j + 1);
+          typewriterElement.innerText = currentWord.substring(0, j + 1);
         }
         j++;
         if (j === currentWord.length) {
