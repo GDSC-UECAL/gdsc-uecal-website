@@ -9,13 +9,14 @@ import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("events")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
   );
 
   const pages = Math.ceil(posts.slice(1).length / 6);
 
   const paths = [];
   for (let i = 1; i <= pages; i++) {
+    const paths: { params: { page: string } }[] = [];
     paths.push({ params: { page: i.toString() } });
   }
   return paths;
@@ -24,17 +25,17 @@ export async function getStaticPaths() {
 const { page } = Astro.params;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={"Events"} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<FeaturedEvent />
+  <head>
+    <BaseHead title={"Events"} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <FeaturedEvent />
       <AllEvents page={page} />
-		</main>
-		<Footer />
-	</body>
+    </main>
+    <Footer />
+  </body>
 </html>
