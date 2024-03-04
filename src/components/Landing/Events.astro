@@ -9,13 +9,11 @@ const posts = (await getCollection("events")).sort(
 const recentPosts = posts.slice(0, 4);
 ---
 
-<div
-  class="bg-[url(/events.jpg)] bg-cover bg-center bg-no-repeat bg-local dark:invert-0"
-  id="home-events">
+<div class="bg-white dark:bg-gray-900" id="home-events">
   <div
     class="mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
     <h2
-      class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-12">
+      class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-12 text-gray-900 dark:text-white">
       Events
     </h2>
 
@@ -34,13 +32,13 @@ const recentPosts = posts.slice(0, 4);
             </div>
             <div class="mt-4 flex justify-between">
               <div>
-                <h3 class="text-md font-semibold text-gray-900">
+                <h3 class="text-md font-semibold text-gray-900 dark:text-white">
                   <a href={`/events/${post.slug}/`}>
-                    <span aria-hidden="true" class="absolute inset-0" />
+                    <span aria-hidden="true" class="absolute inset-0 " />
                     {post.data.title}
                   </a>
                 </h3>
-                <p class="mt-1 text-md text-gray-500">
+                <p class="mt-1 text-md text-gray-500 dark:text-gray-400">
                   <FormattedDate date={post.data.pubDate} />
                 </p>
               </div>
