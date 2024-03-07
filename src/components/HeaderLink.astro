@@ -11,10 +11,10 @@ const linkClasses = `${className}`;
 
 // Determine active state for each link state
 const activeStyles = isActive
-	? "font-medium text-gray-300 hover:text-gray-100"
-	: "font-medium text-gray-400 hover:text-gray-100";
+  ? "font-medium text-gray-300 hover:text-gray-100"
+  : "font-medium text-gray-400 hover:text-gray-100";
 ---
 
 <a href={href} class:list={`${linkClasses} ${activeStyles}`} {...props}>
-	<slot />
+  <slot />
 </a>
