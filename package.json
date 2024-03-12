@@ -1,5 +1,5 @@
 {
-	"name": "gdsc-uecal",
+	"name": "gdsc-uecal-website",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -20,6 +20,6 @@
 		"typescript": "^5.4.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.6.0"
+		"@biomejs/biome": "1.6.1"
 	}
 }
