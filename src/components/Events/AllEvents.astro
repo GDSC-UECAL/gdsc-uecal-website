@@ -5,29 +5,22 @@ import FormattedDate from "../FormattedDate.astro";
 import Pagination from "../Pagination.astro";
 
 const { page } = Astro.props;
-
 const posts = (await getCollection("events")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-
 const allEvents = posts.slice(1);
-
 const itemsPerPage = 6;
 const currentPage = Number(page) || 1;
 const maxPages = Math.ceil(allEvents.length / itemsPerPage);
-
 const startIndex = (currentPage - 1) * itemsPerPage;
 const endIndex = startIndex + itemsPerPage;
-
 const paginatedEvents = allEvents.slice(startIndex, endIndex);
 ---
 
-<section class="pb-24 bg-white dark:bg-gray-900" id="all-events">
+<section class="pb-24">
   <div
     class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center gap-16">
-    <h1 class="text-3xl md:text-5xl text-center font-bold dark:text-white">
-      All Events
-    </h1>
+    <h1 class="text-3xl md:text-5xl text-center font-bold">All Events</h1>
     <Pagination currentPage={currentPage} maxPages={maxPages} />
     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-20">
       {
@@ -38,12 +31,12 @@ const paginatedEvents = allEvents.slice(startIndex, endIndex);
               <Image
                 src={post.data.heroImage}
                 alt="Blue Pyramid Figure"
-                class="h-auto w-auto w-full rounded-xl shadow-md object-center"
+                class="h-96 w-full rounded-3xl border-2 object-contain shadow-md object-center"
               />
 
               <div class="pt-4 flex justify-between">
                 <div>
-                  <h3 class="text-md font-semibold text-gray-900 dark:text-white">
+                  <h3 class="text-md font-semibold text-gray-900">
                     {post.data.title}
                   </h3>
                   <p class="mt-1 text-md text-gray-500">
