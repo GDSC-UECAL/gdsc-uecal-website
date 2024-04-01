@@ -17,7 +17,6 @@ import Button from "../Button.astro";
         class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6 text-gray-800 dark:text-white">
         Together, Let's Make a Difference!
       </h2>
-
       <form
         action=""
         class="mt-6 flex flex-col space-y-4 text-gray-800 dark:text-gray-300"
@@ -48,7 +47,6 @@ import Button from "../Button.astro";
         </Button>
       </form>
     </div>
-
     <div class="relative order-1 lg:order-none">
       <Image
         src={manVR}
@@ -56,21 +54,18 @@ import Button from "../Button.astro";
         loading="eager"
         class="w-100 h-auto animate-[floating_2s_ease-in-out_infinite]"
       />
-
       <Image
         src={topRightCylinder}
         alt="Man with VR headset"
         loading="eager"
         class="absolute top-0 right-0 w-[20%] h-auto animate-[floating_3s_ease-in-out_infinite] delay-100"
       />
-
       <Image
         src={bottomRightCylinder}
         alt="Man with VR headset"
         loading="eager"
         class="absolute bottom-0 right-[10%] w-[30%] h-auto animate-[floating_4s_ease-in-out_infinite] delay-150"
       />
-
       <Image
         src={bottomLeftCircle}
         alt="Man with VR headset"
@@ -84,22 +79,20 @@ import Button from "../Button.astro";
 <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-></script>
-<script type="text/javascript">
+  is:inline></script>
+<script is:inline>
   const public_key = import.meta.env.EMAILJS_PUBLIC_KEY;
   (function () {
     emailjs.init(public_key);
   })();
 </script>
-<script type="text/javascript">
+<script is:inline>
   const contactForm = document.getElementById("contact-form");
   const service_id = import.meta.env.EMAILJS_SERVICE_ID;
   const template_id = import.meta.env.EMAILJS_TEMPLATE_ID;
-
   window.onload = function () {
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
-
       emailjs.sendForm(service_id, template_id, this).then(
         function () {
           contactForm.reset();
