@@ -6,18 +6,20 @@ import AllEvents from "../../components/Events/AllEvents.astro";
 import FeaturedEvent from "../../components/Events/FeaturedEvent.astro";
 import { SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
+
 export async function getStaticPaths() {
   const posts = (await getCollection("events")).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
   );
   const pages = Math.ceil(posts.slice(1).length / 6);
-  const paths = [];
+  let paths: { params: { page: string } }[] = [];
   for (let i = 1; i <= pages; i++) {
     paths.push({ params: { page: i.toString() } });
   }
   return paths;
 }
-const { page } = Astro.params;
+
+const { page }: { page: string } = Astro.params;
 ---
 
 <!doctype html>
