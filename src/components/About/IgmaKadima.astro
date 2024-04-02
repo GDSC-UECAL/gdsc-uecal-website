@@ -6,16 +6,22 @@ import Three from "../../assets/about/3.jpg";
 import Four from "../../assets/about/4.jpg";
 import Five from "../../assets/about/5.jpg";
 import Six from "../../assets/about/6.jpg";
+import Seven from "../../assets/about/7.jpg";
+import Eight from "../../assets/about/8.jpg";
+import Nine from "../../assets/about/9.jpg";
+import Ten from "../../assets/about/10.jpg";
+import Eleven from "../../assets/about/11.jpg";
+import Twelve from "../../assets/about/12.jpg";
 ---
 
 <section class="pt-20 dark:bg-gray-900" id="about-igmakadima">
   <div class="flex flex-col">
     <div class="flex flex-col justify-center items-center p-8">
       <h1
-        class="text-center lg:text-start font-bold text-4xl sm:text-4xl leading-none dark:text-white">
+        class="text-center lg:text-start font-bold text-6xl sm:text-4xl leading-none dark:text-white">
         To Grow and To
         <h1
-          class="text-6xl mb-6 pb-2 text-center font-bold from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent">
+          class="animate-pulse text-8xl mb-6 pb-2 text-center font-bold from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent">
           Igma Kadima
         </h1>
       </h1>
@@ -36,54 +42,106 @@ import Six from "../../assets/about/6.jpg";
 
 <!-- Images -->
 
-<section class="pb-28 pt-12 dark:bg-gray-900" id="about-igmakadima">
+<section class="pb-28 dark:bg-gray-900" id="about-igmakadima">
+  <!-- First Bento Box Grid -->
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-    <!-- Bento Box Image -->
-    <div class="-m-1 flex flex-wrap md:-m-2">
-      <div class="flex w-1/2 flex-wrap">
-        <div class="w-1/2 p-1 md:p-2">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-1">
           <Image
             src={One}
             alt="One"
-            class="block h-full w-full rounded-lg object-cover object-center"
+            class="block w-full rounded-lg object-cover object-center"
           />
         </div>
-        <div class="w-1/2 p-1 md:p-2">
+        <div class="col-span-1">
           <Image
             src={Two}
-            alt="One"
-            class="block h-full w-full rounded-lg object-cover object-center"
+            alt="Two"
+            class="block w-full rounded-lg object-cover object-center"
           />
         </div>
-        <div class="w-full p-1 md:p-2">
+        <div class="col-span-2">
           <Image
             src={Three}
-            alt="One"
-            class="block h-full w-full rounded-lg object-cover object-center"
+            alt="Three"
+            class="block w-full rounded-lg object-cover object-center"
           />
         </div>
       </div>
-      <!-- Start Cutting Here -->
-      <div class="flex w-1/2 flex-wrap">
-        <div class="w-full p-1 md:p-2">
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2">
           <Image
             src={Four}
-            alt="One"
-            class="block h-full w-full rounded-lg object-cover object-center"
+            alt="Four"
+            class="block w-full rounded-lg object-cover object-center"
           />
         </div>
-        <div class="w-1/2 p-1 md:p-2">
+        <div class="col-span-1">
           <Image
             src={Five}
-            alt="One"
-            class="block h-full w-full rounded-lg object-cover object-center"
+            alt="Five"
+            class="block w-full rounded-lg object-cover object-center"
           />
         </div>
-        <div class="w-1/2 p-1 md:p-2">
+        <div class="col-span-1">
           <Image
             src={Six}
-            alt="One"
-            class="block h-full w-full rounded-lg object-cover object-center"
+            alt="Six"
+            class="block w-full rounded-lg object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Second Bento Box Grid -->
+  <div class="container mx-auto px-4 pt-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-1">
+          <Image
+            src={Seven}
+            alt="Seven"
+            class="block w-full rounded-lg object-cover object-center"
+          />
+        </div>
+        <div class="col-span-1">
+          <Image
+            src={Eight}
+            alt="Eight"
+            class="block w-full rounded-lg object-cover object-center"
+          />
+        </div>
+        <div class="col-span-2">
+          <Image
+            src={Nine}
+            alt="Nine"
+            class="block w-full rounded-lg object-cover object-center"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2">
+          <Image
+            src={Ten}
+            alt="Ten"
+            class="block w-full rounded-lg object-cover object-center"
+          />
+        </div>
+        <div class="col-span-1">
+          <Image
+            src={Eleven}
+            alt="Eleven"
+            class="block w-full rounded-lg object-cover object-center"
+          />
+        </div>
+        <div class="col-span-1">
+          <Image
+            src={Twelve}
+            alt="Twelve"
+            class="block w-full rounded-lg object-cover object-center"
           />
         </div>
       </div>
