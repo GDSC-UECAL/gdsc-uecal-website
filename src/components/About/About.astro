@@ -5,13 +5,14 @@ import Divider from "../../assets/divider.svg";
 ---
 
 <section
-  class="py-24 bg-white dark:bg-gray-900 h-screen flex flex-col justify-center items-center mx-auto">
+  class="py-24 bg-white dark:bg-gray-900 h-screen flex flex-col justify-center items-center mx-auto"
+  id="about-whatisgdsc">
   <div class="flex flex-col justify-center items-center p-8">
     <Image
       src={AboutPic}
       alt="GDSC Logo"
       loading="eager"
-      class="w-96 lg:16 h-auto mx-auto lg:mx-0"
+      class="w-2/5 lg:16 h-auto mx-auto lg:mx-0"
     />
 
     <h1
@@ -32,7 +33,11 @@ import Divider from "../../assets/divider.svg";
   </div>
 </section>
 
-<div
-  class="lg:container-fluid lg:mx-auto md:container-fluid sm:container-fluid">
-  <Image src={Divider} alt="Divider" class="xl:w-screen" loading="eager" />
+<div class="flex items-center w-full">
+  <Image
+    src={Divider}
+    alt="Divider"
+    class="xl:w-screen flex-grow"
+    loading="eager"
+  />
 </div>
