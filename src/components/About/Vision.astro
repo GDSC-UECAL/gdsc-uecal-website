@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import Vision from "../../assets/about/vision.png";
+---
+
+<section class="py-32 bg-white dark:bg-gray-900">
+    <div
+        class="max-w-screen-xl mx-auto px-14 sm:px-12 lg:gap-16 grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+        <div class="mt-4 md:mt-0">
+            <h2
+                class="text-start lg:text-start font-bold text-5xl leading-none mb-6 text-[#E3422E] dark:text-white">
+                Vision
+            </h2>
+
+            <p
+                class="text-lg md:text-2xl sm:text-2xl leading-relaxed mb-4 dark:text-gray-400">
+                The organization envisions itself as a catalyst for creating an
+                inclusive and supportive environment that encourages personal
+                and professional growth. Through the power of technology and
+                innovative solutions, we aim to uplift communities, making a
+                positive impact and addressing their needs.
+            </p>
+        </div>
+
+        <Image
+            src={Vision}
+            alt="Vision"
+            class="w-auto h-auto sm:w-auto md:w-auto lg:w-auto mx-auto"
+        />
+    </div>
+</section>
