@@ -29,11 +29,11 @@ const paginatedEvents = allEvents.slice(startIndex, endIndex);
         paginatedEvents.map((post) => (
           <a href={`/events/${post.slug}/`}>
             <li
-              class={`rounded-3xl border-2 p-8 lg:p-10 cursor-pointer shadow-xl ${post.data.borderColor}`}>
+              class={`rounded-3xl cursor-pointer group relative drop-shadow-xl  ${post.data.borderColor}`}>
               <Image
                 src={post.data.heroImage}
                 alt="Blue Pyramid Figure"
-                class="h-auto w-full rounded-3xl ring-1 shadow-xl object-center"
+                class="h-auto w-full rounded-xl shadow-xl object-center group-hover:opacity-75 lg:h-100"
               />
 
               <div class="pt-4 flex justify-between">
