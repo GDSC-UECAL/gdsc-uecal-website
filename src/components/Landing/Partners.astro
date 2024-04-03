@@ -1,11 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import DataCamp from "../../assets/landing/partners/logo_datacamp.png";
-import DataCampDark from "../../assets/landing/partners/logo_datacamp-dark.png";
 import Zuitt from "../../assets/landing/partners/logo_zuitt.png";
 import PocketDevs from "../../assets/landing//partners/logo_pocketdevs.webp";
-import YFSPH from "../../assets/landing//partners/logo_yfsph.png";
-import Devcon from "../../assets/landing//partners/logo_devcon.png";
+import FWDP from "../../assets/landing//partners/logo_fwdp.png";
+// import Devcon from "../../assets/landing//partners/logo_devcon.png";
 
 import ACSS from "../../assets/landing//partners/logo_acss.png";
 import COESS from "../../assets/landing//partners/logo_coess.png";
@@ -61,9 +60,20 @@ import Klik from "../../assets/landing//partners/logo_klik.png";
 
       <a
         href="https://zuitt.co/"
-        class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400 invert dark:invert-0">
+        class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400 dark:invert">
         <Image
           src={Zuitt}
+          alt="Zuitt"
+          loading="eager"
+          class="w-auto h-12 drop-shadow-lg transition-all duration-300 cursor-pointer filter hover:scale-110"
+        />
+      </a>
+
+      <a
+        href="https://zuitt.co/"
+        class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400 dark:invert">
+        <Image
+          src={FWDP}
           alt="Zuitt"
           loading="eager"
           class="w-auto h-12 drop-shadow-lg transition-all duration-300 cursor-pointer filter hover:scale-110"
