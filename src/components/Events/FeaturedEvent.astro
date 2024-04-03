@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import Divider from "../../assets/divider.svg";
 import Button from "../Button.astro";
 
 const posts = (await getCollection("events")).sort(
@@ -12,10 +13,10 @@ const featuredPost = posts[0];
 <section
   class="py-24 bg-white dark:bg-gray-900 flex items-center h-screen mx-auto"
   id="featured-event">
-  <div class="flex flex-col mx-auto max-w-5xl p-8 justify-center items-center">
+  <div class="flex flex-col mx-auto max-w-7xl p-8 justify-center items-center">
     <h1
       class="text-3xl md:text-5xl text-center font-bold mb-16 dark:text-white">
-      Featured Events
+      Featured Event
     </h1>
 
     <div
@@ -44,3 +45,12 @@ const featuredPost = posts[0];
     </div>
   </div>
 </section>
+
+<div class="flex items-center w-full">
+  <Image
+    src={Divider}
+    alt="Divider"
+    class="xl:w-screen flex-grow"
+    loading="eager"
+  />
+</div>
