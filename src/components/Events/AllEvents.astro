@@ -19,17 +19,17 @@ const paginatedEvents = allEvents.slice(startIndex, endIndex);
 
 <section class="pb-24 bg-white dark:bg-gray-900">
   <div
-    class="flex flex-col mx-auto max-w-7xl p-8 pt-24 justify-center items-center gap-16">
+    class="flex flex-col mx-auto max-w-7xl p-8 pt-24 justify-center items-center gap-12">
     <h1 class="text-3xl md:text-5xl text-center font-bold dark:text-gray-100">
       All Events
     </h1>
     <Pagination currentPage={currentPage} maxPages={maxPages} />
-    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 xl:gap-20">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 xl:gap-6">
       {
         paginatedEvents.map((post) => (
           <a href={`/events/${post.slug}/`}>
             <li
-              class={`rounded-3xl cursor-pointer group relative drop-shadow-xl  ${post.data.borderColor}`}>
+              class={`rounded-3xl cursor-pointer group relative  ${post.data.borderColor}`}>
               <Image
                 src={post.data.heroImage}
                 alt="Blue Pyramid Figure"
