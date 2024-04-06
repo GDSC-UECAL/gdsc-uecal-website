@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+import Divider from "../../assets/divider.svg";
+---
+
+<section class="bg-white dark:bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-8 md:px-24 lg:px-8">
+        <div class="mx-auto max-w-6xl md:text-center">
+            <h2
+                class="text-center lg:text-center font-bold text-4xl sm:text-4xl sm:text-start leading-none mb-6 dark:text-white">
+                Making tech education accessible to our growing community.
+            </h2>
+            <p
+                class="mt-4 text-lg tracking-tight text-slate-700 dark:text-gray-300">
+                In three years, GDSC-UE Caloocan has achieved significant
+                growth, with even greater passion, goals, and dreams.
+            </p>
+        </div>
+        <ul
+            role="list"
+            class="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
+            <li>
+                <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                    <li>
+                        <figure
+                            class="relative rounded-xl text-center p-6 bg-white border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 ring-2 ring-black/5 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
+                            <blockquote class="relative p-3">
+                                <p
+                                    class="text-6xl font-bold tracking-tight from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent">
+                                    285+
+                                </p>
+                            </blockquote>
+                            <figcaption class="text-center">
+                                <div
+                                    class="font-display text-slate-900 dark:text-white">
+                                    Members
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                    <li>
+                        <figure
+                            class="relative rounded-xl text-center p-6 bg-white border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 ring-2 ring-black/5 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
+                            <blockquote class="relative p-3">
+                                <p
+                                    class="text-6xl font-bold tracking-tight from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent">
+                                    25+
+                                </p>
+                            </blockquote>
+                            <figcaption class="text-center">
+                                <div
+                                    class="font-display text-slate-900 dark:text-white">
+                                    Events
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                    <li>
+                        <figure
+                            class="relative rounded-xl text-center p-6 bg-white border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 ring-2 ring-black/5 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
+                            <blockquote class="relative p-3">
+                                <p
+                                    class="text-6xl font-bold tracking-tight from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent">
+                                    4.8/5
+                                </p>
+                            </blockquote>
+                            <figcaption class="text-center">
+                                <div
+                                    class="font-display text-slate-900 dark:text-white">
+                                    Event Rating
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<div class="flex items-center w-full">
+    <Image
+        src={Divider}
+        alt="Divider"
+        class="xl:w-screen flex-grow"
+        loading="eager"
+    />
+</div>
