@@ -1,0 +1,261 @@
+---
+export type Props = {
+  defaultMode?: "transparent" | "white";
+};
+
+import HeaderLink from "./HeaderLink.astro";
+import { Image } from "astro:assets";
+import Logo from "../../public/gdsclogo.svg";
+import Button from "./Button.astro";
+
+const { defaultMode = "white" } = Astro.props;
+---
+
+<script src="./darkmode.js"></script>
+
+<div class="fixed w-full top-0 z-50 transition-all" id="navbar">
+  <header
+    class="py-6 px-6 justify-between max-w-screen-xl flex flex-wrap items-center mx-auto">
+    <a href="/" class="block" aria-label="Home">
+      <Image src={Logo} alt="GDSC Logo" class="w-14 h-auto" loading="eager" />
+    </a>
+
+    <button
+      data-a11y-dialog-show="mobile-nav"
+      class="md:hidden"
+      aria-label="Navigation sidebar button">
+      <svg
+        width="24"
+        height="24"
+        class="w-6 h-6 fill-gray-600"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-align-justify"
+        ><line x1="3" x2="21" y1="6" y2="6"></line><line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg
+      >
+
+      <!-- <Icon name="fe:bar" class="w-6 h-6 fill-gray-500" /> -->
+    </button>
+
+    <nav class="gap-14 pl-14 md:flex hidden items-center text-gray-600">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+      <HeaderLink href="/products">Products</HeaderLink>
+      <HeaderLink href="/events">Events</HeaderLink>
+
+      <button
+        onclick="(() => document.body.classList.toggle('dark'))()"
+        class="h-10 w-10 rounded-lg p-2 bg-purple-900 hover:bg-purple-700 dark:hover:bg-purple-400">
+        <svg
+          class="fill-gray-300 block dark:hidden"
+          fill="currentColor"
+          viewBox="0 0 20 20">
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+        <svg
+          class="fill-gray-300 hidden dark:block"
+          fill="currentColor"
+          viewBox="0 0 20 20">
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+</div>
+<div
+  id="mobile-nav"
+  class="dialog-container relative"
+  aria-hidden="true"
+  data-a11y-dialog="mobile-nav">
+  <div data-a11y-dialog-hide class="dialog-overlay"></div>
+  <!-- 3. The actual dialog -->
+  <div
+    role="document"
+    class="bg-white absolute h-full p-4 right-0 top-0 w-[250px] max-w-full dialog-content">
+    <!-- 4. The close button -->
+    <button
+      type="button"
+      data-a11y-dialog-hide
+      aria-label="Close dialog"
+      class="ml-auto block">
+      &times;
+    </button>
+
+    <div class="gap-5 flex flex-col pt-8 text-gray-600">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+      <HeaderLink href="/products">Products</HeaderLink>
+      <HeaderLink href="/events">Events</HeaderLink>
+      <button
+        onclick="(() => document.body.classList.toggle('dark'))()"
+        class="h-10 w-10 rounded-lg p-2 bg-purple-900 hover:bg-purple-700 dark:hover:bg-purple-400">
+        <svg
+          class="fill-gray-300 block dark:hidden"
+          fill="currentColor"
+          viewBox="0 0 20 20">
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+        <svg
+          class="fill-gray-300 hidden dark:block"
+          fill="currentColor"
+          viewBox="0 0 20 20">
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const navbar: HTMLElement | null = document.getElementById("navbar");
+
+    if (navbar) {
+      if (window.scrollY > 0) {
+        navbar.classList.add("bg-purple-950/60");
+        navbar.classList.add("backdrop-filter");
+        navbar.classList.add("backdrop-blur-lg");
+        navbar.classList.add("bg-opacity-30");
+        navbar.classList.add("shadow-xl");
+        navbar.classList.remove("shadow-gray-700/40");
+      } else {
+        navbar.classList.remove("bg-purple-950/60");
+        navbar.classList.remove("backdrop-filter");
+        navbar.classList.remove("backdrop-blur-lg");
+        navbar.classList.remove("bg-opacity-30");
+        navbar.classList.remove("shadow-xl");
+        navbar.classList.remove("shadow-gray-700/40");
+      }
+    }
+  });
+</script>
+
+<script>
+  import A11yDialog from "a11y-dialog";
+
+  const container = document.querySelector("#mobile-nav");
+  if (container) {
+    const dialog = new A11yDialog(container);
+  }
+</script>
+
+<script define:vars={{ defaultMode }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("#nav");
+
+    const changeNavBg = () => {
+      if (window.scrollY > 10) {
+        nav.classList.add("white-nav");
+      } else {
+        nav.classList.remove("white-nav");
+      }
+    };
+
+    if (defaultMode === "transparent") {
+      window.addEventListener("scroll", changeNavBg);
+      changeNavBg();
+    }
+  });
+</script>
+
+<script>
+  const btns = document.querySelectorAll(
+    ".recweek-cta",
+  ) as NodeListOf<HTMLButtonElement>;
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      window.umami?.trackEvent("Recweek CTA Click");
+    });
+  });
+</script>
+
+<style>
+  .white-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(5px) saturate(1.2);
+  }
+
+  /**
+ * 1. Make the dialog container, and its child overlay spread across
+ *    the entire window.
+ */
+  .dialog-container,
+  .dialog-overlay {
+    position: fixed; /* 1 */
+    top: 0; /* 1 */
+    right: 0; /* 1 */
+    bottom: 0; /* 1 */
+    left: 0; /* 1 */
+  }
+
+  /**
+ * 1. Make sure the dialog container and all its descendants sits on
+ *    top of the rest of the page.
+ * 2. Make the dialog container a flex container to easily center the
+ *    dialog.
+ */
+  .dialog-container {
+    z-index: 1000; /* 1 */
+    display: flex; /* 2 */
+  }
+
+  /**
+ * 1. Make sure the dialog container and all its descendants are not
+ *    visible and not focusable when it is hidden.
+ */
+  .dialog-container[aria-hidden="true"] {
+    display: none; /* 1 */
+  }
+
+  /**
+ * 1. Make the overlay look like an overlay.
+ */
+  .dialog-overlay {
+    background-color: rgba(43, 46, 56, 0.9); /* 1 */
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-from-right {
+    from {
+      transform: translateX(60%);
+    }
+  }
+
+  .dialog-overlay {
+    animation: fade-in 200ms both;
+  }
+
+  /**
+ * 1. Add an animation delay equal to the overlay animation duration to
+ *    wait for the overlay to appear before animation in the dialog.
+ */
+  .dialog-content {
+    animation:
+      fade-in 300ms 150ms both,
+      slide-from-right 300ms 150ms both; /* 1 */
+  }
+</style>

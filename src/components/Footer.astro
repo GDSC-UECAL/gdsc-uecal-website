@@ -3,13 +3,8 @@ import { Image } from "astro:assets";
 import BaseHead from "../components/BaseHead.astro";
 
 import Logo from "../../public/gdsclogo.svg";
-const today = new Date();
+const currentYear: number = new Date().getFullYear();
 ---
-
-<script>
-  // Get the current year
-  const currentYear: number = new Date().getFullYear();
-</script>
 
 <BaseHead title="" description="" />
 
@@ -52,6 +47,7 @@ const today = new Date();
       <!-- #Footer Links -->
       <div
         class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 justify-end">
+        <!-- Make the md:grid-cols-4 for Meet the Teams! -->
         <!-- Home -->
         <div>
           <p
@@ -99,6 +95,20 @@ const today = new Date();
           <ul class="mt-2 space-y-2 text-gray-700 dark:text-gray-400">
             <li>
               <a
+                href="about#about-whatisgdsc"
+                class="transition-colors duration-300 hover:text-purple-950 dark:hover:text-purple-500"
+                >What is GDSC?</a
+              >
+            </li>
+            <li>
+              <a
+                href="about#about-igmakadima"
+                class="transition-colors duration-300 hover:text-purple-950 dark:hover:text-purple-500"
+                >Igma Kadima</a
+              >
+            </li>
+            <li>
+              <a
                 href="about#about-mission"
                 class="transition-colors duration-300 hover:text-purple-950 dark:hover:text-purple-500"
                 >Mission</a
@@ -109,13 +119,6 @@ const today = new Date();
                 href="about#about-vision"
                 class="transition-colors duration-300 hover:text-purple-950 dark:hover:text-purple-500"
                 >Vision</a
-              >
-            </li>
-            <li>
-              <a
-                href="about#about-igmakadima"
-                class="transition-colors duration-300 hover:text-purple-950 dark:hover:text-purple-500"
-                >Igma Kadima</a
               >
             </li>
 
@@ -202,7 +205,7 @@ const today = new Date();
     <div class="sm:flex sm:items-center sm:justify-between">
       <p class="text-sm text-gray-600 sm:text-start dark:text-gray-400">
         Google Developer Student Clubs - University of the East Caloocan © All
-        rights reserved. {today.getFullYear()}
+        rights reserved. {currentYear}
       </p>
 
       <div class="flex mt-4 sm:justify-center items-center sm:mt-0 gap-4">

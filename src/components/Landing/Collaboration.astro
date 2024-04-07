@@ -79,13 +79,22 @@ import Button from "../Button.astro";
 <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-  is:inline></script>
+  is:inline
+></script>
+
 <script is:inline>
   const public_key = import.meta.env.EMAILJS_PUBLIC_KEY;
   (function () {
     emailjs.init(public_key);
   })();
 </script>
+
+<script is:inline type="text/javascript">
+  (function () {
+    emailjs.int("user_Ty-14qHLLZtr1Tsa9-6Ab");
+  })();
+</script>
+
 <script is:inline>
   const contactForm = document.getElementById("contact-form");
   const service_id = import.meta.env.EMAILJS_SERVICE_ID;
