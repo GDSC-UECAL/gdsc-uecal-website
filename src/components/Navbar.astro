@@ -41,8 +41,6 @@ const { defaultMode = "white" } = Astro.props;
           y1="12"
           y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg
       >
-
-      <!-- <Icon name="fe:bar" class="w-6 h-6 fill-gray-500" /> -->
     </button>
 
     <nav class="gap-14 pl-14 md:flex hidden items-center text-gray-600">
@@ -81,11 +79,9 @@ const { defaultMode = "white" } = Astro.props;
   aria-hidden="true"
   data-a11y-dialog="mobile-nav">
   <div data-a11y-dialog-hide class="dialog-overlay"></div>
-  <!-- 3. The actual dialog -->
   <div
     role="document"
     class="bg-white absolute h-full p-4 right-0 top-0 w-[250px] max-w-full dialog-content">
-    <!-- 4. The close button -->
     <button
       type="button"
       data-a11y-dialog-hide
@@ -125,8 +121,17 @@ const { defaultMode = "white" } = Astro.props;
 </div>
 
 <script>
+  // Declaration to fix TypeScript error
+  declare global {
+    interface Window {
+      umami?: {
+        trackEvent: (eventName: string) => void;
+      };
+    }
+  }
+
   window.addEventListener("scroll", () => {
-    const navbar: HTMLElement | null = document.getElementById("navbar");
+    const navbar = document.getElementById("navbar");
 
     if (navbar) {
       if (window.scrollY > 0) {
@@ -146,91 +151,71 @@ const { defaultMode = "white" } = Astro.props;
       }
     }
   });
-</script>
 
-<script>
   import A11yDialog from "a11y-dialog";
 
   const container = document.querySelector("#mobile-nav");
   if (container) {
-    const dialog = new A11yDialog(container);
+    const dialog = new A11yDialog(container as HTMLElement);
   }
-</script>
 
-<script define:vars={{ defaultMode }}>
   document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector("#nav");
 
     const changeNavBg = () => {
       if (window.scrollY > 10) {
-        nav.classList.add("white-nav");
+        if (nav) {
+          nav.classList.add("white-nav");
+        }
       } else {
-        nav.classList.remove("white-nav");
+        if (nav) {
+          nav.classList.remove("white-nav");
+        }
       }
     };
 
+    const defaultMode = "transparent";
     if (defaultMode === "transparent") {
       window.addEventListener("scroll", changeNavBg);
       changeNavBg();
     }
   });
-</script>
 
-<script>
-  const btns = document.querySelectorAll(
-    ".recweek-cta",
-  ) as NodeListOf<HTMLButtonElement>;
+  const btns = document.querySelectorAll(".recweek-cta");
   btns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      window.umami?.trackEvent("Recweek CTA Click");
+      if (typeof window.umami?.trackEvent === "function") {
+        window.umami.trackEvent("Recweek CTA Click");
+      }
     });
   });
 </script>
-
 <style>
   .white-nav {
     background-color: rgba(255, 255, 255, 0.8);
-
     backdrop-filter: blur(5px) saturate(1.2);
   }
 
-  /**
- * 1. Make the dialog container, and its child overlay spread across
- *    the entire window.
- */
   .dialog-container,
   .dialog-overlay {
-    position: fixed; /* 1 */
-    top: 0; /* 1 */
-    right: 0; /* 1 */
-    bottom: 0; /* 1 */
-    left: 0; /* 1 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
-  /**
- * 1. Make sure the dialog container and all its descendants sits on
- *    top of the rest of the page.
- * 2. Make the dialog container a flex container to easily center the
- *    dialog.
- */
   .dialog-container {
-    z-index: 1000; /* 1 */
-    display: flex; /* 2 */
+    z-index: 1000;
+    display: flex;
   }
 
-  /**
- * 1. Make sure the dialog container and all its descendants are not
- *    visible and not focusable when it is hidden.
- */
   .dialog-container[aria-hidden="true"] {
-    display: none; /* 1 */
+    display: none;
   }
 
-  /**
- * 1. Make the overlay look like an overlay.
- */
   .dialog-overlay {
-    background-color: rgba(43, 46, 56, 0.9); /* 1 */
+    background-color: rgba(43, 46, 56, 0.9);
   }
 
   @keyframes fade-in {
@@ -249,13 +234,9 @@ const { defaultMode = "white" } = Astro.props;
     animation: fade-in 200ms both;
   }
 
-  /**
- * 1. Add an animation delay equal to the overlay animation duration to
- *    wait for the overlay to appear before animation in the dialog.
- */
   .dialog-content {
     animation:
       fade-in 300ms 150ms both,
-      slide-from-right 300ms 150ms both; /* 1 */
+      slide-from-right 300ms 150ms both;
   }
 </style>
