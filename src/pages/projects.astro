@@ -1,0 +1,24 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import HeaderDark from "../components/HeaderDark.astro";
+import HeroProject from "../components/Projects/HeroProject.astro";
+import GridCards from "../components/Projects/GridCards.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={"Projects"} description={SITE_DESCRIPTION} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body class="text-gray-700 antialiased">
+    <HeaderDark />
+    <main transition:animate="slide">
+      <HeroProject />
+      <GridCards />
+      <Footer />
+    </main>
+  </body>
+</html>
