@@ -45,13 +45,13 @@ const { defaultMode = "white" } = Astro.props;
     </button>
 
     <nav class="gap-14 pl-14 md:flex hidden items-center text-gray-600">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
-      <HeaderLink href="/projects">Projects</HeaderLink>
-      <HeaderLink href="/events">Events</HeaderLink>
+      <HeaderLink href="/" data-astro-reload>Home</HeaderLink>
+      <HeaderLink href="/about" data-astro-reload>About</HeaderLink>
+      <HeaderLink href="/projects" data-astro-reload>Projects</HeaderLink>
+      <HeaderLink href="/events" data-astro-reload>Events</HeaderLink>
 
       <!-- Dark Mode Button -->
-      <button
+      <!-- <button
         onclick="(() => document.body.classList.toggle('dark'))()"
         class="h-10 w-10 rounded-lg p-2 bg-purple-900 hover:bg-purple-700 dark:hover:bg-purple-400">
         <svg
@@ -71,7 +71,7 @@ const { defaultMode = "white" } = Astro.props;
             fill-rule="evenodd"
             clip-rule="evenodd"></path>
         </svg>
-      </button>
+      </button> -->
     </nav>
   </header>
 </div>
@@ -94,11 +94,12 @@ const { defaultMode = "white" } = Astro.props;
     </button>
 
     <div class="gap-5 flex flex-col pt-8 text-gray-600">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
-      <HeaderLink href="/projects">Projects</HeaderLink>
-      <HeaderLink href="/events">Events</HeaderLink>
-      <button
+      <HeaderLink href="/" data-astro-reload>Home</HeaderLink>
+      <HeaderLink href="/about" data-astro-reload>About</HeaderLink>
+      <HeaderLink href="/projects" data-astro-reload>Projects</HeaderLink>
+      <HeaderLink href="/events" data-astro-reload>Events</HeaderLink>
+      <!-- Dark Mode Button -->
+      <!-- <button
         onclick="(() => document.body.classList.toggle('dark'))()"
         class="h-10 w-10 rounded-lg p-2 bg-purple-900 hover:bg-purple-700 dark:hover:bg-purple-400">
         <svg
@@ -118,7 +119,7 @@ const { defaultMode = "white" } = Astro.props;
             fill-rule="evenodd"
             clip-rule="evenodd"></path>
         </svg>
-      </button>
+      </button> -->
     </div>
   </div>
 </div>
