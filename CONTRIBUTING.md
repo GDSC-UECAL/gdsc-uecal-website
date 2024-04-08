@@ -23,7 +23,7 @@ npm install
 4. Start the development server.
 
 ```bash
-npm run dev
+npm run dev / npm run start
 ```
 
 ## Commit Convention
@@ -44,6 +44,7 @@ the following categories:
 - `build`: all changes regarding the build of the software, changes to
   dependencies or the addition of new dependencies
 - `event`: adding a new markdown documentation event within the website.
+- `project`: adding a new projects within the website.
 - `test`: all changes regarding tests (adding new tests or changing existing
   ones)
 - `ci`: all changes regarding the configuration of continuous integration (i.e.
