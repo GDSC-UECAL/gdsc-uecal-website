@@ -1,6 +1,6 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Navbar.astro";
+import HeaderDark from "../../components/HeaderDark.astro";
 import Footer from "../../components/Footer.astro";
 import AllEvents from "../../components/Events/AllEvents.astro";
 import FeaturedEvent from "../../components/Events/FeaturedEvent.astro";
@@ -14,7 +14,7 @@ import { SITE_DESCRIPTION } from "../../consts";
     <BaseHead title={"Events"} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header />
+    <HeaderDark />
     <main>
       <FeaturedEvent />
       <Stats />
