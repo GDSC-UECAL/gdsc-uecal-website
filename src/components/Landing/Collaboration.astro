@@ -11,7 +11,7 @@ import Button from "../Button.astro";
 
 <section class="py-40 bg-white dark:bg-gray-900" id="home-email">
   <div
-    class="max-w-screen-xl mx-auto px-14 sm:px-14 lg:gap-16 grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+    class="max-w-screen-xl mx-auto px-8 sm:px-8 lg:gap-16 grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
     <div class="mt-4 md:mt-0 order-2 lg:order-none">
       <h2
         class="text-start lg:text-start font-bold text-3xl sm:text-4xl leading-none mb-6 text-gray-800 dark:text-white">
@@ -47,29 +47,29 @@ import Button from "../Button.astro";
         </Button>
       </form>
     </div>
-    <div class="relative order-1 lg:order-none">
+    <div class="relative order-1 lg:order-none px-8">
       <Image
         src={manVR}
         alt="Man with VR headset"
-        loading="eager"
+        loading="lazy"
         class="w-100 h-auto animate-[floating_2s_ease-in-out_infinite]"
       />
       <Image
         src={topRightCylinder}
         alt="Man with VR headset"
-        loading="eager"
+        loading="lazy"
         class="absolute top-0 right-0 w-[20%] h-auto animate-[floating_3s_ease-in-out_infinite] delay-100"
       />
       <Image
         src={bottomRightCylinder}
         alt="Man with VR headset"
-        loading="eager"
+        loading="lazy"
         class="absolute bottom-0 right-[10%] w-[30%] h-auto animate-[floating_4s_ease-in-out_infinite] delay-150"
       />
       <Image
         src={bottomLeftCircle}
         alt="Man with VR headset"
-        loading="eager"
+        loading="lazy"
         class="absolute bottom-[10%] left-0 w-[30%] h-auto animate-[floating_5s_ease-in-out_infinite] delay-75"
       />
     </div>
@@ -79,8 +79,7 @@ import Button from "../Button.astro";
 <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-  is:inline
-></script>
+  is:inline></script>
 
 <script is:inline>
   const public_key = import.meta.env.EMAILJS_PUBLIC_KEY;
