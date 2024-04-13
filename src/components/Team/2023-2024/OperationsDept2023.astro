@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import Bustamante from "../../../assets/team/2023-2024/Bustamante.jpg";
+import Cruz from "../../../assets/team/2023-2024/Cruz.jpg";
+import Lopez from "../../../assets/team/2023-2024/Lopez.jpg";
+---
+
+<!-- Operations Dept -->
+<div class="mx-auto mb-8 max-w-screen-7xl lg:mb-16 px-8 pt-16">
+    <h2
+        class="mb-4 text-5xl tracking-tight font-extrabold text-start lg:text-center md:text-start text-gray-900 dark:text-white">
+        Operations Department
+    </h2>
+    <p
+        class="font-light text-gray-500 sm:text-xl text-start lg:text-center md:text-start dark:text-gray-400">
+        Ensures seamless event execution and initiative implementation,
+        optimizing resources for successful outcomes through meticulous
+        planning.
+    </p>
+</div>
+
+<div
+    class="grid gap-6 lg:gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+    <div class="text-center text-gray-500 dark:text-gray-400">
+        <Image
+            src={Bustamante}
+            alt="Officer"
+            loading="lazy"
+            class="mx-auto mb-4 w-36 h-36 rounded-2xl"
+        />
+        <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <p>Alixhan Bustamante</p>
+        </h3>
+        <p>Secretary</p>
+    </div>
+    <div class="text-center text-gray-500 dark:text-gray-400">
+        <Image
+            src={Cruz}
+            alt="Officer"
+            loading="lazy"
+            class="mx-auto mb-4 w-36 h-36 rounded-2xl"
+        />
+        <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <p>Kelcey Cruz</p>
+        </h3>
+        <p>Partnership Lead</p>
+    </div>
+    <div class="text-center text-gray-500 dark:text-gray-400">
+        <Image
+            src={Lopez}
+            alt="Officer"
+            loading="lazy"
+            class="mx-auto mb-4 w-36 h-36 rounded-2xl"
+        />
+        <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <p>Isabel Lopez</p>
+        </h3>
+        <p>Finance Lead</p>
+    </div>
+</div>
