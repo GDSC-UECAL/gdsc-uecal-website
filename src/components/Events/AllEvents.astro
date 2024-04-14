@@ -27,7 +27,7 @@ const paginatedEvents = allEvents.slice(startIndex, endIndex);
     <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 xl:gap-8">
       {
         paginatedEvents.map((post) => (
-          <a href={`/events/${post.slug}/`}>
+          <a href={`/events/${post.slug}/`} data-astro-reload>
             <li
               class={`rounded-3xl cursor-pointer group relative  ${post.data.borderColor}`}>
               <Image

@@ -3,15 +3,17 @@ import { Image } from "astro:assets";
 import Divider from "../../assets/divider.svg";
 ---
 
-<section class="bg-white dark:bg-gray-900 py-24 sm:py-32" id="stats">
+<section
+    class="bg-white dark:bg-gray-900 py-24 sm:py-32 flex items-center p-5 justify-center bg-[url(/background.webp)] bg-cover bg-center relative overflow-hidden"
+    id="stats">
     <div class="mx-auto max-w-7xl px-8 md:px-24 lg:px-8">
         <div class="mx-auto max-w-6xl md:text-center">
             <h2
-                class="text-center lg:text-center font-bold text-4xl sm:text-4xl sm:text-start leading-none mb-6 dark:text-white">
+                class="text-center lg:text-center text-white font-bold text-4xl sm:text-4xl sm:text-start leading-none mb-6">
                 Making tech education accessible to our growing community.
             </h2>
             <p
-                class="mt-4 text-lg tracking-tight text-slate-700 dark:text-gray-300">
+                class="text-center lg:text-center mt-4 text-xl tracking-tight text-slate-300 dark:text-gray-300">
                 In three years, GDSC-UE Caloocan has achieved significant
                 growth, with even greater passion, goals, and dreams.
             </p>
@@ -23,18 +25,17 @@ import Divider from "../../assets/divider.svg";
                 <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
                     <li>
                         <figure
-                            class="relative rounded-xl text-center p-6 bg-white border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 ring-2 ring-black/5 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
+                            class="rounded-xl text-center p-6 shadow-md ring-black/5 ring-2 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
                             <blockquote class="relative p-3">
                                 <p
-                                    class="text-6xl font-bold tracking-tight from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent stat-number"
+                                    class="text-6xl font-bold tracking-tight from-red-300 via-pink-blue to-violet-300 bg-gradient-to-r bg-clip-text text-transparent stat-number"
                                     data-stat={285}>
                                     285
                                     <span data-symbol class="hidden">+</span>
                                 </p>
                             </blockquote>
                             <figcaption class="text-center">
-                                <div
-                                    class="font-display text-slate-900 dark:text-white">
+                                <div class="font-bold text-slate-200">
                                     Members
                                 </div>
                             </figcaption>
@@ -46,18 +47,17 @@ import Divider from "../../assets/divider.svg";
                 <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
                     <li>
                         <figure
-                            class="relative rounded-xl text-center p-6 bg-white border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 ring-2 ring-black/5 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
+                            class="rounded-xl text-center p-6 shadow-md ring-black/5 ring-2 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
                             <blockquote class="relative p-3">
                                 <p
-                                    class="text-6xl font-bold tracking-tight from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent stat-number"
+                                    class="text-6xl font-bold tracking-tight from-red-300 via-pink-blue to-violet-300 bg-gradient-to-r bg-clip-text text-transparent stat-number"
                                     data-stat={25}>
                                     25
                                     <span data-symbol class="hidden">+</span>
                                 </p>
                             </blockquote>
                             <figcaption class="text-center">
-                                <div
-                                    class="font-display text-slate-900 dark:text-white">
+                                <div class="font-bold text-slate-200">
                                     Events
                                 </div>
                             </figcaption>
@@ -69,18 +69,17 @@ import Divider from "../../assets/divider.svg";
                 <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
                     <li>
                         <figure
-                            class="relative rounded-xl text-center p-6 bg-white border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 ring-2 ring-black/5 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
+                            class="rounded-xl text-center p-6 shadow-md ring-black/5 ring-2 bg-transparent backdrop-filter backdrop-blur-md bg-opacity-5 isolate">
                             <blockquote class="relative p-3">
                                 <p
-                                    class="text-6xl font-bold tracking-tight from-red-600 via-pink-blue to-violet-600 bg-gradient-to-r bg-clip-text text-transparent stat-number"
+                                    class="text-6xl font-bold tracking-tight from-red-300 via-pink-blue to-violet-300 bg-gradient-to-r bg-clip-text text-transparent stat-number"
                                     data-stat={4.8}>
                                     4.8/5
                                     <span data-symbol class="hidden">.8/5</span>
                                 </p>
                             </blockquote>
                             <figcaption class="text-center">
-                                <div
-                                    class="font-display text-slate-900 dark:text-white">
+                                <div class="font-bold text-slate-200">
                                     Event Rating
                                 </div>
                             </figcaption>
